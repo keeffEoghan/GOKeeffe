@@ -1,2 +1,1 @@
-GOKeeffe
-========
+Website for Garden and Landscape Designer Gerry O'Keeffe
