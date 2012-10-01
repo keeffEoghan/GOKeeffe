@@ -1,0 +1,1629 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #444;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: #444;
+    color: white;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/leaguegothic/league_gothic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ostrich Rounded';
+    src: url('../fonts/Ostrich Sans/Ostrich Rounded.ttf') format('truetype');
+    font-weight: normal;
+}*/
+
+@font-face {
+    font-family: 'IM Fell English SC';
+    font-style: normal;
+    font-weight: normal;
+    src: local('IM FELL English SC'), local('IM_FELL_English_SC'), url(http://themes.googleusercontent.com/static/fonts/imfellenglishsc/v3/h3Tn6yWfw4b5qaLD1RWvz2YU_NAY3j90c9z94KlCU1M.woff) format('woff');
+}
+
+.no-touch ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border: 1px outset rgba(40, 40, 40, 0.8);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAMElEQVQIW2P8//+/T1tb21kGIKiurjZmbG1tlYRxgJIMYAGQDIgDUskIlPWBcUAqAdDwG+px6kTPAAAAAElFTkSuQmCC);
+}
+
+.no-touch ::-webkit-scrollbar:hover {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAMElEQVQIW2P8//+/T1tb21kGIKiurjZmbG1tlYRxgJIMYAGQDIgDUskIlPWBcUAqAdDwG+px6kTPAAAAAElFTkSuQmCC),
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAMElEQVQIW2P8//+/T1tb21kGIKiurjZmbG1tlYRxgJIMYAGQDIgDUskIlPWBcUAqAdDwG+px6kTPAAAAAElFTkSuQmCC);
+}
+
+.no-touch ::-webkit-scrollbar-button {
+    width: 16px;
+    height: 16px;
+}
+
+.no-touch ::-webkit-scrollbar-thumb,
+.no-touch ::-webkit-scrollbar-button {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 6px 2px rgba(255, 255, 255, 0.9);
+}
+
+.no-touch ::-webkit-scrollbar-thumb {
+    border: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-button:horizontal {
+    border-bottom: 1px outset rgba(40, 40, 40, 0.5);
+    border-top: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-button:horizontal:decrement {
+    border-right: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-button:horizontal:increment {
+    border-left: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-button:vertical {
+    border-left: 1px outset rgba(40, 40, 40, 0.5);
+    border-right: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-button:vertical:decrement {
+    border-bottom: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-button:vertical:increment {
+    border-top: 1px outset rgba(40, 40, 40, 0.5);
+}
+
+.no-touch ::-webkit-scrollbar-thumb:hover,
+.no-touch ::-webkit-scrollbar-button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5px 2px rgba(255, 255, 255, 1);
+    border-color: rgba(40, 40, 40, 0.6);
+}
+
+.no-touch ::-webkit-scrollbar-corner {
+    border: 1px solid rgba(0, 0, 0, 1);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAMElEQVQIW2P8//+/T1tb21kGIKiurjZmbG1tlYRxgJIMYAGQDIgDUskIlPWBcUAqAdDwG+px6kTPAAAAAElFTkSuQmCC);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -ms-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+}
+
+a:hover {
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+html {
+    height: 100%;
+    background: rgb(255, 255, 255);
+    color: hsl(0, 0%, 0%);
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+nav {
+    position: absolute; /* Mobile with no position: fixed support?; */
+    position: fixed;
+    top: -1.1em;
+    left: 0;
+    right: 0;
+    height: 1.6em;
+    font-size: 1em;
+    overflow: hidden;
+    z-index: 3;
+    border-bottom: 1px solid white;
+    -webkit-transition: top 0.2s ease-in-out 0.2s;
+    -moz-transition: top 0.2s ease-in-out 0.2s;
+    -ms-transition: top 0.2s ease-in-out 0.2s;
+    -o-transition: top 0.2s ease-in-out 0.2s;
+    transition: top 0.2s ease-in-out 0.2s;
+}
+
+body.loading > nav,
+nav:hover {
+    top: 0;
+    -webkit-transition: top 0.2s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out;
+    -o-transition: top 0.2s ease-in-out;
+    transition: top 0.2s ease-in-out;
+}
+
+nav.offscreen {
+    top: -1.6em;
+}
+
+nav > menu {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+nav > menu > li {
+    float: left;
+    text-align: center;
+    vertical-align: top;
+    border-right: 2px solid white;
+    width: 25%;
+    height: 100%;
+    background: rgb(100, 180, 30);
+    position: relative;
+}
+
+nav > menu > li:last-of-type {
+    border: none;
+}
+
+nav > menu > li:before {
+    content: " ";
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 0;
+    left: 100%;
+    margin-left: -0.3em;
+    z-index: 2;
+    background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 60%, rgb(100, 180, 30) 60%);
+    background: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 60%, rgb(100, 180, 30) 60%);
+    background: -ms-linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 60%, rgb(100, 180, 30) 60%);
+    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 60%, rgb(100, 180, 30) 60%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 60%, rgb(100, 180, 30) 60%);
+}
+/*
+nav > menu > li:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    border-top: 2em solid rgb(100, 180, 30);
+    border-right: 2em solid transparent;
+    left: 100%;
+    margin-left: -0.3em;
+    z-index: 2;
+}
+
+nav > menu > li:after {
+    content: " ";
+    position: absolute;
+    width: 2%;
+    height: 0;
+    top: 0;
+    border-top: 2em solid white;
+    border-right: 2em solid transparent;
+    left: 100%;
+    margin-left: -0.3em;
+    z-index: 1;
+}*/
+
+nav a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    color: white !important;
+}
+
+#main {
+    position: absolute;
+    top: 0.5em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+#main > section {
+    display: inline-block;
+    height: 100%;
+    min-width: 90%;
+    position: relative;
+    overflow: visible;
+    white-space: normal;
+    vertical-align: top;    /* Prevents weird extra space above when descendents are inline-block */
+}
+
+.js #main > section:first-child {
+    margin-left: 100%;
+}
+
+.js #main > section:last-child {
+    margin-right: 100%;
+}
+
+#main > section > h1 {
+    color: rgb(91, 156, 10);
+    font-size: 4em;
+    font-family: 'IM Fell English SC', serif;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+}
+
+canvas.blottext {
+    position: absolute;
+    z-index: 1;
+}
+
+#plantbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* STEPS { */
+
+.step {
+    float: left;
+    position: relative;
+    top: 0em;
+    height: 20%;
+    white-space: normal;
+}
+
+.r1 {
+    top: 20%;
+}
+
+.r2 {
+    top: 40%;
+}
+
+.r3 {
+    top: 60%;
+}
+
+.r4 {
+    top: 80%;
+}
+
+/* } */
+
+/* HOME { */
+
+#home {
+    min-width: 100% !important;
+}
+
+/* } */
+
+/* ABOUT { */
+
+#intro {
+    position: relative;
+    top: 50%;
+    margin-top: -8em;
+    min-height: 16em;
+    height: 60%;
+    max-height: 40em;
+    white-space: nowrap;
+}
+
+#intro > .step {
+    opacity: 1;
+    margin: 0 0.1em;
+    background: hsla(65, 81%, 50%, 0.8);
+    -webkit-transition: background 0.3s ease-in-out,
+        opacity 0.5s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out,
+        opacity 0.5s ease-in-out;
+    -ms-transition: background 0.3s ease-in-out,
+        opacity 0.5s ease-in-out;
+    -o-transition: background 0.3s ease-in-out,
+        opacity 0.5s ease-in-out;
+    transition: background 0.3s ease-in-out,
+        opacity 0.5s ease-in-out;
+}
+
+#intro > .step:hover {
+    background: hsla(65, 81%, 50%, 1);
+}
+
+#intro > .step {
+    height: auto;
+    min-height: 10em;
+    max-height: 16em;
+    min-width: 10em;
+    max-width: 26em;
+}
+
+#intro > aside.step {
+    height: 10em;
+    width: 10em;
+    padding: 0;
+    overflow: hidden;
+}
+
+#intro > .r1,
+#intro > .r2,
+#intro > .r3,
+#intro > .r4 {
+    top: 0;
+}
+
+@media only screen and (min-height: 26.17em) {
+    #intro {
+        top: 20%;
+        /* Accounting for 16em margin-top on .steps */
+        margin-top: -16em;
+        min-height: 32em;
+        max-height: 56em;
+    }
+
+    #intro > .step {
+        /* Prevents .steps from being pushed out of flow over the
+            top by subtracting from .r4's -16em top margin */
+        margin-top: 16em;
+    }
+
+    #intro > .r1 {
+        top: 25%;
+        margin-top: 12em;
+    }
+
+    #intro > .r2 {
+        top: 50%;
+        margin-top: 8em;
+    }
+
+    #intro > .r3 {
+        top: 75%;
+        margin-top: 4em;
+    }
+
+    #intro > .r4 {
+        top: 100%;
+        margin-top: 0em;
+    }
+}
+
+@media only screen and (min-height: 66.17em) {
+    #intro {
+        top: 50%;
+        margin-top: -20em;
+        min-height: 16em;
+        max-height: 40em;
+    }
+
+    #intro > .step {
+        margin-top: 0;
+    }
+    
+    #intro > .r1 {
+        top: 6em;
+    }
+
+    #intro > .r2 {
+        top: 12em;
+    }
+
+    #intro > .r3 {
+        top: 18em;
+    }
+
+    #intro > .r4 {
+        top: 24em;
+    }
+}
+
+#intro p {
+    padding: 0.5em 1em;
+    overflow-y: auto;
+}
+
+#intro > aside.step > p {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.no-touch #intro > aside.step > p {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.no-touch #intro > aside.step:hover > p {
+    opacity: 1;
+}
+
+#intro > .left,
+#intro > .right,
+#intro > .above,
+#intro > .below {
+    opacity: 0;
+}
+
+/* } */
+
+/* WORK { */
+
+#work {
+    z-index: 10;
+}
+
+#reelbox {
+    background: rgba(0, 0, 255, 0);
+    height: 100%;
+    margin-right: 7.3em;
+    float: right;
+    white-space: nowrap;
+    position: relative;
+    right: 0px;
+    -webkit-transition: margin-right 0.3s ease-in-out,
+        right 0.3s ease-in-out;
+    -moz-transition: margin-right 0.3s ease-in-out,
+        right 0.3s ease-in-out;
+    -ms-transition: margin-right 0.3s ease-in-out,
+        right 0.3s ease-in-out;
+    -o-transition: margin-right 0.3s ease-in-out,
+        right 0.3s ease-in-out;
+    transition: margin-right 0.3s ease-in-out,
+        right 0.3s ease-in-out;
+}
+
+#reelbox.selected {
+    margin-right: 0em;
+}
+
+.workreel {
+    cursor: pointer;
+    position: relative;
+    right: 0px;
+    top: 0;
+    padding-top: 0.5em;
+    min-width: 1.6em; /* The reel's width is defined by the header */
+    max-width: 18em;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 0 1em;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.4);
+    white-space: normal;
+    -webkit-transition: background 0.5s ease-out,
+        min-width 0.3s ease-in-out,
+        max-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out,
+        padding-top 0.3s ease-in-out,
+        right 0s ease-in-out,
+        z-index 0s linear 0.3s;
+    -moz-transition: background 0.5s ease-out,
+        min-width 0.3s ease-in-out,
+        max-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out,
+        padding-top 0.3s ease-in-out,
+        right 0s ease-in-out,
+        z-index 0s linear 0.3s;
+    -ms-transition: background 0.5s ease-out,
+        min-width 0.3s ease-in-out,
+        max-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out,
+        padding-top 0.3s ease-in-out,
+        right 0s ease-in-out,
+        z-index 0s linear 0.3s;
+    -o-transition: background 0.5s ease-out,
+        min-width 0.3s ease-in-out,
+        max-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out,
+        padding-top 0.3s ease-in-out,
+        right 0s ease-in-out,
+        z-index 0s linear 0.3s;
+    transition: background 0.5s ease-out,
+        min-width 0.3s ease-in-out,
+        max-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out,
+        padding-top 0.3s ease-in-out,
+        right 0s ease-in-out,
+        z-index 0s linear 0.3s;
+}
+
+.workreel:hover,
+.workreel.selected {
+    margin: 0 0.3em; /* The loss in margin here is equal to the gain in padding on the header */
+}
+
+.workreel:hover {
+    background: rgba(0, 0, 0, 0.6);
+    max-width: 18em !important;
+}
+
+.workreel.selected {
+    cursor: auto;
+    min-width: 18em;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.workreel.selected:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.workreel.active {
+    z-index: 8;
+    padding-top: 0em;
+    -webkit-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+    -moz-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+    -ms-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+    -o-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+    transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.workreel.right {
+    right: 0px !important;
+    margin: 0em;
+    max-width: 1.6em;
+}
+
+.workreel.right:before {
+    content: '◄';
+    position: absolute;
+    bottom: 50%;
+    width: 1.6em;
+    text-align: center;
+    color: white;
+}
+
+.workreel.selected:before {
+    content: '';
+}
+
+.workreel > div {
+    position: absolute;
+    width: 18em;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -9em; /* Half the full-size reel (places centerline at reel's left) */
+    margin-left: 50%; /* Moves centerline to center of reel */
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.workreel > header {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    text-align: center;
+    position: relative;
+    top: 60%;
+    padding: 0 0.6em;
+    border-top: 0.2em solid transparent;
+    border-bottom: 0.2em solid transparent;
+    min-width: 2.6em;
+    max-width: 10em;
+    max-height: 18%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    -webkit-transition: top 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background 0.3s ease-in-out,
+        opacity 0.2s ease-in-out;
+    -moz-transition: top 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background 0.3s ease-in-out,
+        opacity 0.2s ease-in-out;
+    -ms-transition: top 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background 0.3s ease-in-out,
+        opacity 0.2s ease-in-out;
+    -o-transition: top 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background 0.3s ease-in-out,
+        opacity 0.2s ease-in-out;
+    transition: top 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background 0.3s ease-in-out,
+        opacity 0.2s ease-in-out;
+}
+
+.workreel:hover > div {
+    opacity: 0.6;
+}
+
+.workreel.selected > div {
+    opacity: 1;
+}
+
+.workreel:hover > header,
+.workreel.selected > header {
+    padding: 0 1.3em; /* Widens reel by 0.7em either side */
+    z-index: 3;
+}
+
+.workreel.right > header {
+    opacity: 0;
+}
+
+.workreel:hover > header {
+    background: rgba(0, 0, 0, 0.6);
+    top: 65%;
+    opacity: 1;
+}
+
+.workreel.selected > header {
+    background: rgba(0, 0, 0, 0.8);
+    top: 80%;
+    opacity: 1;
+}
+
+.workreel > div > figure {
+    position: relative;
+    width: 18em; /* Ensures no shrinkage from scrollbar */
+    border-top: 5px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 20px solid transparent;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition: background 2s ease-out,
+        border 0.3s ease-in-out;
+    -moz-transition: background 2s ease-out,
+        border 0.3s ease-in-out;
+    -ms-transition: background 2s ease-out,
+        border 0.3s ease-in-out;
+    -o-transition: background 2s ease-out,
+        border 0.3s ease-in-out;
+    transition: background 2s ease-out,
+        border 0.3s ease-in-out;
+}
+
+.workreel > div > figure:hover,
+.workreel > div > figure.selected {
+    -webkit-transition-duration: 0.3s, 0.3s;
+    -moz-transition-duration: 0.3s, 0.3s;
+    -ms-transition-duration: 0.3s, 0.3s;
+    -o-transition-duration: 0.3s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+}
+
+.workreel > div > figure:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.workreel.active > div > figure.selected {
+    background: rgba(255, 255, 255, 1);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    z-index: 1;
+    box-shadow: 0 0 2em white;
+}
+
+.workreel > div > figure > img {
+    width: 100%;
+    cursor: pointer;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    -ms-transition: -ms-transform 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.workreel.selected > div > figure:hover > img,
+.workreel > div > figure.selected > img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.workreel > div > figure > figcaption {
+    position: absolute;
+    bottom: 5%;
+    right: -80%;
+    max-width: 80%;
+    max-height: 60%;
+    margin: 0;
+    padding: 0 0.5em;
+    border-top: 0.2em solid transparent;
+    border-bottom: 0.2em solid transparent;
+    overflow-y: auto;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    -webkit-transition: right 0.3s ease-in-out;
+    -moz-transition: right 0.3s ease-in-out;
+    -ms-transition: right 0.3s ease-in-out;
+    -o-transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
+}
+
+.workreel.selected > div > figure:hover > figcaption,
+.touch .workreel.selected > div > figure > figcaption {
+    right: 0%;
+}
+
+#imagebox {
+    cursor: not-allowed;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px 40px;
+    background: white;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out,
+        z-index 0s linear 0.3s;
+    -moz-transition: opacity 0.3s ease-in-out,
+        z-index 0s linear 0.3s;
+    -ms-transition: opacity 0.3s ease-in-out,
+        z-index 0s linear 0.3s;
+    -o-transition: opacity 0.3s ease-in-out,
+        z-index 0s linear 0.3s;
+    transition: opacity 0.3s ease-in-out,
+        z-index 0s linear 0.3s;
+}
+
+#imagebox.active {
+    opacity: 1;
+    z-index: 7;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#imagebox > img {
+    position: absolute;
+    cursor: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* } */
+
+/* CONTACT { */
+
+#contact {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0 30%;
+    white-space: nowrap !important;
+    min-width: 70% !important;
+    color: white;
+    text-align: center;
+}
+
+.no-csstransforms #contact {
+    padding: 0 30%;
+    margin: 0;
+}
+
+#shapes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#darkshape {
+    position: absolute;
+    height: 100%;
+    /* 10.5% of parent width (70%) == 30% of window width == extra space at either side of parent */
+    width: 79%;
+    left: 10.5%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.csstransforms #darkshape {
+    /* Half-square isoceles hypoteneuse: sqrt(1/2)*(contact width) == 0.707*cw
+        Fit cw inside triangle: hypoteneuse*3 == 2.1213*cw */
+    /* Fallback for width == height (JS) */
+    height: 212.13%;
+    width: 212.13%;
+    /* -0.5*shapeHeight */
+    top: -106.065%;
+    left: -106.065%;
+    margin-left: 50%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#contact > h1 {
+    white-space: normal;
+    top: 50%;
+    margin-top: -0.5em;
+    left: 0;
+}
+
+.no-csstransforms #contact > h1 {
+    min-width: 21%;
+}
+
+#center {
+    text-align: left;
+    display: inline-block;
+    z-index: 2;
+    height: 100%;
+    /* To maintain z-order against transformed shape element */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+#contact section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#form,
+#details {
+    height: 100%;
+    white-space: normal;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 0 1em;
+}
+
+#details {
+    position: relative;
+    min-width: 20em;
+    width: 20%;
+    max-width: 30em;
+}
+
+#details > p,
+#details > address {
+    position: absolute;
+    padding: 2em 1.5em;
+    margin: 0;
+    width: 100%;
+    max-height: 50%;
+    overflow-y: auto;
+}
+
+#details > p {
+    bottom: 50%;
+}
+
+#details > address {
+    top: 50%;
+}
+
+#form {
+    position: relative;
+    display: inline-block;
+    max-width: 40em;
+    padding-left: 20px;
+    -webkit-transition: max-width 0.5s ease-in-out;
+    -moz-transition: max-width 0.5s ease-in-out;
+    -ms-transition: max-width 0.5s ease-in-out;
+    -o-transition: max-width 0.5s ease-in-out;
+    transition: max-width 0.5s ease-in-out;
+}
+
+.closed > #form {
+    max-width: 20px;
+    cursor: pointer;
+}
+
+.closed > #form:hover {
+    max-width: 30px;
+}
+
+#what-next {
+    position: absolute;
+    font-size: 2em;
+    height: 7.5em;
+    left: 100%;
+    top: 50%;
+    margin-top: -3.75em;
+    margin-left: 1em;
+}
+
+form {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#main-bar {
+    position: absolute;
+    font-size: 2em;
+    height: 1.5em;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -0.75em;
+    z-index: 2;
+}
+
+#inner-bar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2px 0;
+    overflow: hidden;
+    border-left: 10px solid grey;
+    border-right: 10px solid grey;
+}
+
+#clear,
+#submit {
+    float: left;
+    border: none;
+    border-left: 0.2em solid grey;
+    border-right: 0.2em solid grey;
+    box-shadow: inset 0 0 0.7em 0.45em grey;
+    color: white;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+    -webkit-transition: box-shadow 0.3s ease-in-out,
+        background 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out,
+        background 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.3s ease-in-out,
+        background 0.5s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out,
+        background 0.5s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out,
+        background 0.5s ease-in-out;
+}
+
+#clear:hover,
+#submit:hover {
+    box-shadow: inset 0 0 0.5em 0.35em grey;
+}
+
+#clear {
+    background: rgba(230, 50, 50, 0.5);
+}
+
+#clear:hover {
+    background: rgba(230, 50, 50, 0.8);
+}
+
+#submit {
+    background: rgba(50, 190, 50, 0.5);
+}
+
+#submit:hover {
+    background: rgba(50, 190, 50, 0.8);
+}
+
+.input-roll {
+    height: 50%;
+    padding-right: 20px;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    background-clip: content-box;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out 0.3s;
+    -moz-transition: opacity 0.3s ease-in-out 0.3s;
+    -ms-transition: opacity 0.3s ease-in-out 0.3s;
+    -o-transition: opacity 0.3s ease-in-out 0.3s;
+    transition: opacity 0.3s ease-in-out 0.3s;
+}
+
+.closed .input-roll {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#main-message {
+    border-bottom: 1.4em solid transparent;
+}
+
+#extra-details {
+    border-top: 1.4em solid transparent;
+}
+
+.input-roll > aside {
+    text-align: center;
+}
+
+.input-roll > aside,
+label,
+input,
+textarea,
+select,
+fieldset {
+    position: relative;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    line-height: normal;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.input-roll > label,
+.input-roll > fieldset,
+.input-roll > aside {
+    min-height: 1.95em;
+    width: 30em;
+    margin: 1em 0;
+    padding: 0.1em 0.2em;
+    background: rgba(201, 201, 201, 0.9);
+}
+
+.input-roll > fieldset {
+    position: relative;
+}
+
+input, textarea, select {
+    width: 23em;
+    padding: 0.1em 0.2em;
+}
+
+.inlinecontrols {
+    display: inline-block;
+    width: 23em !important;
+    text-align: center;
+}
+
+input[type="radio"] {
+    width: auto;
+    height: 1.65em;
+    vertical-align: middle;
+}
+
+label.radio {
+    display: inline-block;
+    background: white;
+    color: black;
+    text-align: left;
+    border-radius: 1em 0 0 1em;
+    vertical-align: middle;
+    border: 1px solid rgba(127, 127, 127, 0.5);
+    margin: 0 0.5em;
+    padding: 0 0.5em;
+}
+
+/*input[type="radio"]:after {
+    content: " ";
+    position: absolute;
+    width: 0.75em;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    background: -webkit-linear-gradient(-45deg, transparent 50%, white 50%) no-repeat right top,
+        -webkit-linear-gradient(-315deg, transparent 50%, white 50%) no-repeat right bottom;
+    background: -moz-linear-gradient(-45deg, transparent 50%, white 50%) no-repeat right top,
+        -moz-linear-gradient(-315deg, transparent 50%, white 50%) no-repeat right bottom;
+    background: -ms-linear-gradient(-45deg, transparent 50%, white 50%) no-repeat right top,
+        -ms-linear-gradient(-315deg, transparent 50%, white 50%) no-repeat right bottom;
+    background: -o-linear-gradient(-45deg, transparent 50%, white 50%) no-repeat right top,
+        -o-linear-gradient(-315deg, transparent 50%, white 50%) no-repeat right bottom;
+    background: linear-gradient(-45deg, transparent 50%, white 50%) no-repeat right top,
+        linear-gradient(-315deg, transparent 50%, white 50%) no-repeat right bottom;
+    background-size: 100% 55%;
+}*/
+
+#spam {
+    width: 16em;
+}
+
+#size {
+    width: 15em;
+    border-radius: 0;
+}
+
+select[name="sizes"] {
+    width: 8em;
+}
+
+#what-next > .step,
+#false-step {
+    float: left;
+    font-size: 1em;
+    min-width: 9em;
+    height: 1.5em;
+    margin-top: -4px;
+    padding: 0 2em;
+    background: grey;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#what-next > .step {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#false-step {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin: 0 -0.9px 0 0;
+    padding-right: 0;
+    min-width: 11em;
+}
+
+#what-next > .r1 {
+    margin-top: -2px;
+}
+
+#what-next > .r2 {
+    margin-top: 0px;
+}
+
+#what-next > .r3 {
+    margin-top: 2px;
+}
+
+#what-next > .r4 {
+    margin-top: 4px;
+}
+
+#what-next > .right {
+    opacity: 0;
+}
+
+#what-next > .down:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: linear-gradient(45deg, grey 50%, transparent 50%);
+}
+
+#what-next > .down+.step:before,
+.firstdown:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin-right: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: linear-gradient(-135deg, grey 50%, transparent 50%);
+}
+
+#what-next > .up:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: linear-gradient(-45deg, grey 50%, transparent 50%);
+}
+
+#what-next > .up+.step:before,
+.firstup:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin-right: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(135deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(135deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(135deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(135deg, grey 50%, transparent 50%);
+    background: linear-gradient(135deg, grey 50%, transparent 50%);
+}
+
+#false-step:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-right: 20px solid grey;
+    margin-right: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(-135deg, grey 50%, transparent 50%);
+    background: linear-gradient(-135deg, grey 50%, transparent 50%);
+}
+
+#main-bar.down:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-left: 1.5em solid grey;
+    margin-left: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(45deg, grey 50%, transparent 50%);
+    background: linear-gradient(45deg, grey 50%, transparent 50%);
+}
+
+#main-bar.up:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-left: 1.5em solid grey;
+    margin-left: -0.9px;
+    width: 1.5em;
+    height: 1.5em;
+    background: -webkit-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: -moz-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: -ms-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: -o-linear-gradient(-45deg, grey 50%, transparent 50%);
+    background: linear-gradient(-45deg, grey 50%, transparent 50%);
+}
+
+/* } */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

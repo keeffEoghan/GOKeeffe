@@ -1,235 +1,472 @@
-<!doctype html>
-  <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-  <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-  <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-  <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-  <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-  <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+		<head>
+				<meta charset="utf-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+				<title>Gerry O'Keeffe - Garden Design</title>
+				<meta name="description" content="">
+				<meta name="viewport" content="width=device-width">
 
-    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-    More info: h5bp.com/i/378 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+				<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <title>Gerry O'Keeffe - Garden Design</title>
-    <meta name="description" content="">
+				<link rel="stylesheet" href="css/normalize.css">
+				<link rel="stylesheet" href="css/main.css">
+				<script src="js/vendor/modernizr-2.6.1.min.js"></script>
+		</head>
+		<body class="loading">
+				<!--[if lt IE 7]>
+						<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+				<![endif]-->
+				
+				<header></header>
 
-    <!-- Mobile viewport optimized: h5bp.com/viewport -->
-    <meta name="viewport" content="width=device-width">
+				<nav>
+					<menu>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</menu>
+				</nav>
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+				<section id="main">
+					<section id="home">
+						<h1>Gerry O'Keeffe</h1>
+					</section>
 
-    <link rel="stylesheet" href="css/style.css">
+					<section id="about">
+						<h1>About</h1>
+						<article id="intro">
+							<!--<p class="step">
+								Qualifying in horticulture in 1976, Gerry O'Keeffe worked in Ireland, Asia, Africa and Australia. This influence broadened his design sense in the use of plants and other materials.<br/>
+								Over time, he combined the development of skills in the use of wood, copper and stone, with garden design.
+							</p>
+							<p class="step">
+								His garden design, outdoor sculpture and landscaping service creates distinctive gardens.
+							</p>-->
 
-    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+							<p class="step">
+								Gerry O’Keeffe operates a garden design, consultancy and landscaping business based in North Wexford.  He qualified in horticulture in 1976, and worked in the Botanic Gardens, and in the horticultural industry in Ireland, before spending a decade working in rural development, water and woodland management in Asia and Africa.
+							</p>
+							<p class="step">
+								<a href="http://www.glda.ie/designers/Gerry%20O'Keeffe/21.htm" target="_blank"><img src="http://www.glda.ie/media/photoID/small/gerry_okeeffe_00_q.jpg" alt="Gerry O'Keeffe - GLDA" title="Gerry O'Keeffe - GLDA"></a>
+							</p>
+							<aside class="step">
+								<p>
+									Most of his work, ranging in scale from small urban to large rural gardens, is for private clients.  He has also designed public spaces for local authorities, hospitals and special schools, throughout the country.
+								</p>
+							</aside>
+							<p class="step">
+								In addition to horticulture, he has pursued a lifetime interest in sculpture, mostly in wood, and more recently, in carving large outdoor pieces. This sculptural element is seen in the serpentine decks and large organically shaped ferrocement plant containers in many of his designs.
+							</p>
+							<p class="step">
+								Gerry’s gardens are influenced by natural landscapes, using trees with an understorey of luxuriant planting, water, stone and wood to create calming, sustainable environments.
+							</p>
+							<p class="step">
+								His emphasis on the initial consultation and concept stage of the design process, ensures that the final garden is suitable to the client’s requirements.
+							</p>
+							<aside class="step">
+								<p>
+									Plants are always the main element in his designs and are used to form areas of colour, texture and scent for year round interest.
+								</p>
+							</aside>
 
-    <!-- All JavaScript at the bottom, except this Modernizr build.
-    Modernizr enables HTML5 elements & feature detects for optimal performance.
-    Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="js/libs/modernizr-2.5.0.min.js"></script>
-  </head>
-  <body>
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-    chromium.org/developers/how-tos/chrome-frame-getting-started -->
-    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-    <header></header>
+							<!-- p class="step">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum tellus a orci fermentum non egestas felis consequat. In hac habitasse platea dictumst. Etiam arcu purus, faucibus vel tempus at, venenatis ac tortor. Donec venenatis felis nec orci mattis vel mattis ante pretium. Aenean imperdiet pretium nunc, non pharetra neque congue vel. Donec magna neque, pulvinar non tincidunt non, vulputate at odio. Vestibulum quis orci eu libero consequat luctus. Nunc hendrerit cursus metus, non tempus erat mollis ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+							</p>
+							<p class="step">
+								Vestibulum quis eros eros, condimentum imperdiet dui. In eget tempus dui. Mauris mauris urna, tincidunt eget dignissim in, facilisis eget leo. Proin non mattis augue. Etiam porta lobortis posuere. Aenean sollicitudin molestie nulla, non rutrum nisi dapibus id. Vivamus mollis, libero et posuere tincidunt, nisl turpis ultrices sem, et congue lorem sem id leo. Suspendisse mattis iaculis nisi, sed convallis libero pharetra sit amet. In tristique porta urna, a tincidunt augue varius et. Aliquam sapien eros, volutpat vel malesuada quis, adipiscing a odio. Sed molestie rhoncus ante, ultrices hendrerit sem interdum nec.
+							</p>
+							<p class="step">
+								Vivamus facilisis odio vel sapien fermentum porta. Phasellus quis libero sit amet magna faucibus tempor. Morbi augue risus, vehicula a euismod vitae, pretium eu turpis. Integer auctor mi quis ligula rhoncus aliquet. Pellentesque facilisis ipsum non nibh posuere a fermentum est laoreet. Cras velit ante, varius non pulvinar et, consectetur vel nibh. Morbi venenatis, lorem ut consequat posuere, velit velit cursus tellus, sit amet ultricies erat turpis vel eros. Nunc ullamcorper, tellus nec scelerisque pellentesque, dolor lacus aliquet magna, at pulvinar massa augue sed lacus. Suspendisse sit amet odio odio. Fusce ultrices, justo sit amet facilisis ornare, ipsum arcu pharetra nisi, non blandit mauris dui ut lacus. Praesent gravida, orci non rutrum lobortis, erat mauris vulputate justo, non ultricies nulla felis non urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum augue id ligula pharetra laoreet nec at augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis luctus blandit.
+							</p> -->
 
-    <nav>
-      <menu>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </menu>
-    </nav>
+							<p class="step">
+								<a href="http://www.glda.ie/designers/Gerry%20O'Keeffe/21.htm" target="_blank"><img src="http://www.glda.ie/images/logo.gif" alt="GLDA Website - Gerry O'Keeffe's Page" title="GLDA Website - Gerry O'Keeffe's Page"></a>
+							</p>
+						</article>
+					</section>
 
-    <div id="scroll">
-      <section id="home">
-        <h1>Gerry O'Keeffe</h1>
-      </section>
+					<section id="work">
+						<h1>Work</h1>
+						<div id="reelbox">
+							<article class="workreel">
+								<header>one</header>
+								<div>
+									<figure>
+										<img src="http://www.glda.ie/media/photoID/small/gerry_okeeffe_00_q.jpg" alt="Gerry O'Keeffe - GLDA" title="Gerry O'Keeffe - GLDA">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+								</div>
+							</article>
+							<article class="workreel">
+								<header>twoooooooo</header>
+								<div>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+								</div>
+							</article>
+							<article class="workreel">
+								<header>threeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</header>
+								<div>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>Vivamus facilisis odio vel sapien fermentum porta. Phasellus quis libero sit amet magna faucibus tempor. Morbi augue risus, vehicula a euismod vitae, pretium eu turpis. Integer auctor mi quis ligula rhoncus aliquet. Pellentesque facilisis ipsum non nibh posuere a fermentum est laoreet. Cras velit ante, varius non pulvinar et, consectetur vel nibh. Morbi venenatis, lorem ut consequat posuere, velit velit cursus tellus, sit amet ultricies erat turpis vel eros. Nunc ullamcorper, tellus nec scelerisque pellentesque, dolor lacus aliquet magna, at pulvinar massa augue sed lacus. Suspendisse sit amet odio odio. Fusce ultrices, justo sit amet facilisis ornare, ipsum arcu pharetra nisi, non blandit mauris dui ut lacus. Praesent gravida, orci non rutrum lobortis, erat mauris vulputate</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+								</div>
+							</article>
+							<article class="workreel">
+								<header>four</header>
+								<div>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+								</div>
+							</article>
+							<article class="workreel">
+								<header>gallery five goes here ya know</header>
+								<div>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Green.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+									<figure>
+										<img src="img/Orange.png">
+										<figcaption>description goes here</figcaption>
+									</figure>
+								</div>
+							</article>
+							<figure id="imagebox" class="hidden">
+								<img>
+								<img>
+							</figure>
+						</div>
+					</section>
 
-      <section id="about">
-        <h1>About</h1>
-        <!--<p>
-          Qualifying in horticulture in 1976, Gerry O'Keeffe worked in Ireland, Asia, Africa and Australia. This influence broadened his design sense in the use of plants and other materials.<br/>
-          Over time, he combined the development of skills in the use of wood, copper and stone, with garden design.
-        </p>
-        <p>
-          His garden design, outdoor sculpture and landscaping service creates distinctive gardens.
-        </p>-->
+					<section id="contact">
+						<div id="shapes">
+							<div id="darkshape"></div>
+						</div>
 
-        <p>
-          Gerry O’Keeffe operates a garden design, consultancy and landscaping business based in North Wexford.  He qualified in horticulture in 1976, and worked in the Botanic Gardens, and in the horticultural industry in Ireland, before spending a decade working in rural development, water and woodland management in Asia and Africa.
-        </p>
-        <p>
-          <a href="http://www.glda.ie/designers/Gerry%20O'Keeffe/21.htm" target="_blank"><img src="http://www.glda.ie/media/photoID/small/gerry_okeeffe_00_q.jpg" alt="Gerry O'Keeffe - GLDA" title="Gerry O'Keeffe - GLDA"></a>
-        </p>
-        <p>
-          Most of his work, ranging in scale from small urban to large rural gardens, is for private clients.  He has also designed public spaces for local authorities, hospitals and special schools, throughout the country.<br/>
-          In addition to horticulture, he has pursued a lifetime interest in sculpture, mostly in wood, and more recently, in carving large outdoor pieces. This sculptural element is seen in the serpentine decks and large organically shaped ferrocement plant containers in many of his designs.
-        </p>
-        <p>
-          Gerry’s gardens are influenced by natural landscapes, using trees with an understorey of luxuriant planting, water, stone and wood to create calming, sustainable environments.<br/>
-          His emphasis on the initial consultation and concept stage of the design process, ensures that the final garden is suitable to the client’s requirements.<br/>
-          Plants are always the main element in his designs and are used to form areas of colour, texture and scent for year round interest.
-        </p>
+						<h1>Contact</h1>
+						<div id="center">
+							<section id="details">
+								<p>
+									If you'd like to get in touch, you can send a message from here, or have a look at my details.
+								</p>
+								<address>
+									Mobile: <a href="tel:+353868497672">(+353) 86 849 7672</a><br/>
+									Landline: <a href="tel:+353539425805">(+353) 53 94 25805</a><br/>
+									<br/>
+									Gerry O'Keeffe,<br/>
+									Kildermot,<br/>
+									Ballymoney,<br/>
+									Gorey,<br/>
+									Co. Wexford,<br/>
+									Ireland
+								</address>
+							</section>
 
-        <!-- p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum tellus a orci fermentum non egestas felis consequat. In hac habitasse platea dictumst. Etiam arcu purus, faucibus vel tempus at, venenatis ac tortor. Donec venenatis felis nec orci mattis vel mattis ante pretium. Aenean imperdiet pretium nunc, non pharetra neque congue vel. Donec magna neque, pulvinar non tincidunt non, vulputate at odio. Vestibulum quis orci eu libero consequat luctus. Nunc hendrerit cursus metus, non tempus erat mollis ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-        </p>
-        <p>
-          Vestibulum quis eros eros, condimentum imperdiet dui. In eget tempus dui. Mauris mauris urna, tincidunt eget dignissim in, facilisis eget leo. Proin non mattis augue. Etiam porta lobortis posuere. Aenean sollicitudin molestie nulla, non rutrum nisi dapibus id. Vivamus mollis, libero et posuere tincidunt, nisl turpis ultrices sem, et congue lorem sem id leo. Suspendisse mattis iaculis nisi, sed convallis libero pharetra sit amet. In tristique porta urna, a tincidunt augue varius et. Aliquam sapien eros, volutpat vel malesuada quis, adipiscing a odio. Sed molestie rhoncus ante, ultrices hendrerit sem interdum nec.
-        </p>
-        <p>
-          Vivamus facilisis odio vel sapien fermentum porta. Phasellus quis libero sit amet magna faucibus tempor. Morbi augue risus, vehicula a euismod vitae, pretium eu turpis. Integer auctor mi quis ligula rhoncus aliquet. Pellentesque facilisis ipsum non nibh posuere a fermentum est laoreet. Cras velit ante, varius non pulvinar et, consectetur vel nibh. Morbi venenatis, lorem ut consequat posuere, velit velit cursus tellus, sit amet ultricies erat turpis vel eros. Nunc ullamcorper, tellus nec scelerisque pellentesque, dolor lacus aliquet magna, at pulvinar massa augue sed lacus. Suspendisse sit amet odio odio. Fusce ultrices, justo sit amet facilisis ornare, ipsum arcu pharetra nisi, non blandit mauris dui ut lacus. Praesent gravida, orci non rutrum lobortis, erat mauris vulputate justo, non ultricies nulla felis non urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum augue id ligula pharetra laoreet nec at augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis luctus blandit.
-        </p> -->
+							<section id="form">
+								<form method="post" action="index.php">
+									<fieldset id="main-message" class="input-roll">
+										<aside>
+											You can write your message and fill out your details here.
+										</aside>
 
-        <p>
-          <a href="http://www.glda.ie/designers/Gerry%20O'Keeffe/21.htm" target="_blank"><img src="http://www.glda.ie/images/logo.gif" alt="GLDA Website - Gerry O'Keeffe's Page" title="GLDA Website - Gerry O'Keeffe's Page"></a>
-        </p>
-      </section>
+										<label for="name">Name 
+											<input id="name" name="name" type="text" placeholder="Placeholder..." required="true"/>
+										</label>
 
-      <section id="work">
-        <h1>Work</h1>
-      </section>
+										<fieldset>
+											<label for="email">E-mail 
+												<input id="email" name="email" type="email" placeholder="Placeholder..." required="true"/>
+											</label>
+											<label for="phone">Phone 
+												<input id="phone" name="phone" type="tel" placeholder="Placeholder..." required="true"/>
+											</label>
+										</fieldset>
 
-      <section id="contact">
-        <h1>Contact</h1>
-        <div>
-          <div class="selected" tabindex="2">
-            <form method="post" action="index.php">
-              <fieldset>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Placeholder..." required="true"/>
+										<label for="message">Message 
+											<textarea id="message" name="message" placeholder="Placeholder..." required="true"></textarea>
+										</label>
 
-                <fieldset>
-                  <legend>and/or</legend>
-                  <label for="email">E-mail</label>
-                  <input id="email" name="email" type="email" placeholder="Placeholder..."/>
-                  <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel" placeholder="Placeholder..."/>
-                </fieldset>
+										<label for="spam"><strong>Anti Spam Check:</strong> <span>2+2</span> = 
+											<input id="spam" name="spam" type="number" required="true"/>
+										</label>
+									</fieldset>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Placeholder..." required="true"></textarea>
+									<fieldset id="main-bar" class="step">
+										<h2 id="false-step">get in touch</h2>
+										<fieldset id="inner-bar">
+											<input id="clear" name="clear" type="reset" value="Clear">
+											<input id="submit" name="submit" type="submit" value="Send">
+										</fieldset>
+									</fieldset>
 
-                <label for="spam"><strong>Anti Spam Check:</strong> <span>2+2</span> = </label>
-                <input id="spam" name="spam" type="number" required="true"/>
-              </fieldset>
+									<fieldset id="extra-details" class="input-roll">
+										<aside>
+											If you'd like to have work done on your garden, you can also provide extra information about it here.
+										</aside>
+										
+										<label for="address">Address <input id="address" name="address" type="text" placeholder="Placeholder..."/></label>
 
-              <fieldset>
-                <p>
-                  If you'd like to have work done on your garden, feel free to fill in extra information below about your garden.
-                </p>
-                
-                <label for="address">Address</label>
-                <input id="address" name="address" type="text" placeholder="Placeholder..."/>
+										<label for="size">Size 
+											<fieldset class="inlinecontrols">
+												<input id="size" name="size" type="text" placeholder="Placeholder..."/><select name="sizes">
+													<option value="feet">feet</option>
+													<option value="acres" selected>acres</option>
+													<option value="hectares">hectares</option>
+													<option value="metres">metres</option>
+												</select>
+											</fieldset>
+										</label>
 
-                <label for="size">Size</label>
-                <fieldset>
-                  <input id="size" name="size" type="text" placeholder="Placeholder..."/>
-                  <select name="sizes">
-                    <option value="feet">feet</option>
-                    <option value="acres" selected>acres</option>
-                    <option value="hectares">hectares</option>
-                    <option value="metres">metres</option>
-                  </select>
-                </fieldset>
+										<label for="orientations">Orientation 
+											<select id="orientations" name="orientations">
+												<option value="south">South-Facing</option>
+												<option value="southwest">South-West-Facing</option>
+												<option value="west">West-Facing</option>
+												<option value="northwest">North-West-Facing</option>
+												<option value="north">North-Facing</option>
+												<option value="northeast">North-East-Facing</option>
+												<option value="east">East-Facing</option>
+												<option value="southeast">South-East-Facing</option>
+											</select>
+										</label>
 
-                <label for="orientations">Orientation</label>
-                <select id="orientations" name="orientations">
-                  <option value="south">South-Facing</option>
-                  <option value="southwest">South-West-Facing</option>
-                  <option value="west">West-Facing</option>
-                  <option value="northwest">North-West-Facing</option>
-                  <option value="north">North-Facing</option>
-                  <option value="northeast">North-East-Facing</option>
-                  <option value="east">East-Facing</option>
-                  <option value="southeast">South-East-Facing</option>
-                </select>
+										<label>Shelter 
+											<fieldset class="inlinecontrols">
+												<label for="sheltered" class="radio">
+													<input id="sheltered" name="shelter" type="radio" value="sheltered"/> Sheltered
+												</label>
+												<label for="windy" class="radio">
+													<input id="windy" name="shelter" type="radio" value="windy"/> Windy
+												</label>
+											</fieldset>
+										</label>
 
-                <label>Shelter</label>
-                <fieldset id="shelter">
-                  <input id="sheltered" name="shelter" type="radio" value="sheltered"/>
-                  <label for="sheltered">Sheltered</label>
-                  <input id="windy" name="shelter" type="radio" value="windy"/>
-                  <label for="windy">Windy</label>
-                </fieldset>
+										<label>Garden Age 
+											<fieldset class="inlinecontrols">
+												<label for="young" class="radio">
+													<input id="young" name="age" type="radio" value="young"/> Young
+												</label>
+												<label for="mature" class="radio">
+													<input id="mature" name="age" type="radio" value="mature"/> Mature
+												</label>
+											</fieldset>
+										</label>
 
-                <label>Garden Age</label>
-                <fieldset id="age">
-                  <input id="young" name="age" type="radio" value="young"/>
-                  <label for="young">Young</label>
-                  <input id="mature" name="age" type="radio" value="mature"/>
-                  <label for="mature">Mature</label>
-                </fieldset>
+										<label for="soiltypes">Soil Type 
+											<select id="soiltypes" name="soiltypes">
+												<option value="acidic">Acidic</option>
+												<option value="alkaline">Alkaline</option>
+												<option value="other">Other</option>
+											</select>
+										</label>
 
-                <label for="style">House Style</label>
-                <input id="style" name="style" type="text" placeholder="Placeholder..."/>
+										<label for="style">House Style 
+											<input id="style" name="style" type="text" placeholder="Placeholder..."/>
+										</label>
 
-                <label for="soiltypes">Soil Type</label>
-                <select id="soiltypes" name="soiltypes">
-                  <option value="acidic">Acidic</option>
-                  <option value="alkaline">Alkaline</option>
-                  <option value="other">Other</option>
-                </select>
+										<label for="other">Other Notes 
+											<textarea id="other" name="notes" placeholder="Placeholder..."></textarea>
+										</label>
+									</fieldset>
+								</form>
+							</section>
 
-                <label for="other">Other Notes</label>
-                <textarea id="other" name="notes" placeholder="Placeholder..."></textarea>
-              </fieldset>
+							<section id="what-next">
+								<h2 class="step">site visit</h2>
+								<h2 class="step">concept design</h2>
+								<h2 class="step">discussion</h2>
+								<h2 class="step">final design</h2>
+								<h2 class="step">construction</h2>
+								<h2 class="step">your new garden</h2>
+							</section>
+						</div>
+					</section>
+				</section>
 
-              <fieldset>
-                <input id="submit" name="submit" type="submit" value="Send">
-                <input id="clear" name="clear" type="button" value="Clear">
-              </fieldset>
-            </form>
-          </div>
+				<canvas id="plantbox">
+					<p>
+						<!-- TODO: change to standardised prompt -->
+						Your browser doesn't support this feature - try downloading a 
+						<a href="http://browsehappy.com/" target="_blank">more modern browser</a>.
+					</p>
+				</canvas>
 
-          <div tabindex="1">
-            <p>
-              Contact form above
-            </p>
-            <p>
-              Contact details below
-            </p>
-          </div>
+				<footer></footer>
 
-          <div tabindex="3">
-          </div>
-        </div>
-      </section>
-    </div>
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+				<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+				<script src="js/plugins.js"></script>
+				<script src="js/main.js"></script>
 
-    <canvas id="plantbox">
-      <p>
-        <!-- TODO: change to standardised prompt -->
-        Your browser doesn't support this feature - try downloading a 
-        <a href="http://browsehappy.com/" target="_blank">more modern browser</a>.
-      </p>
-    </canvas>
-
-    <footer></footer>
-
-
-    <!-- JavaScript at the bottom for fast page loading -->
-
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
-
-    <!-- scripts concatenated and minified via build script -->
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
-    <!-- end scripts -->
-
-    <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-    mathiasbynens.be/notes/async-analytics-snippet -->
-    <!-- <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script> -->
-  </body>
+				<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+				<!--<script>
+						var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+						(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+						g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+						s.parentNode.insertBefore(g,s)}(document,'script'));
+				</script>-->
+		</body>
 </html>

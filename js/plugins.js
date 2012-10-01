@@ -1,10 +1,17 @@
-// usage: log('inside coolFunc', this, arguments);
-// paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
-window.log = function f(){ log.history = log.history || []; log.history.push(arguments); if(this.console) { var args = arguments, newarr; args.callee = args.callee.caller; newarr = [].slice.call(args); if (typeof console.log === 'object') log.apply.call(console.log, console, newarr); else console.log.apply(console, newarr);}};
+// Avoid `console` errors in browsers that lack a console.
+if (!(window.console && console.log)) {
+    (function() {
+        var noop = function() {};
+        var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'markTimeline', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
+        var length = methods.length;
+        var console = window.console = {};
+        while (length--) {
+            console[methods[length]] = noop;
+        }
+    }());
+}
 
-// make it safe to use console.log always
-(function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
-(function(){try{console.log();return window.console;}catch(a){return (window.console={});}}());
+// Place any jQuery/helper plugins in here.
 
 /* Standardise requestAnimationFrame */
 if(!self.requestAnimationFrame) {
@@ -242,18 +249,16 @@ if(!self.requestAnimationFrame) {
 				
 				$.each(arguments, function() {
 					var prop = $.camelCase(this.toString()),
-						Prop = $.camelCase("-"+prop),	//prefixed dash ensures cap first letter
-						WebkitProp = ('Webkit'+Prop),
-						MozillaProp = ('Moz'+Prop),
-						MSProp = ('Ms'+Prop),
-						OracleProp = ('O'+Prop);
+						Prop = $.camelCase("-"+prop);	// prefixed dash ensures cap first letter
 
-					std[prop] =
-						((div.style[WebkitProp] === '')? WebkitProp
-						:	((div.style[MozillaProp] === '')? MozillaProp
-						:	((div.style[OracleProp] === '')? OracleProp
-						:	((div.style[MsProp] === '')? MsProp
-						:	false))));
+					'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,
+						function(val) {
+							var prefixedProp = val+Prop;
+
+							if(prefixedProp in div.style) {
+								std[prop] = prefixedProp;
+							}
+						});
 
 					/* Only create CSS hook if property is supported
 						and vendor-prefixed */
@@ -277,46 +282,94 @@ if(!self.requestAnimationFrame) {
 			}
 		}
 	});
-	
+
 	$.fn.extend({
-		watchVisible: function(container) {
-			container = container || window;
+		repaint: function() {
+			return this.each(function() {
+				var $this = $(this),
+					o = $this.css('opacity')-0.1;
 
-			var $elems = this, $window = $(window);
-
-			$(container).on("scroll.watchVisible resize.watchVisible",
-				function(e) {
-					var scrollLeft = $window.scrollLeft(),
-						scrollTop = $window.scrollTop(),
-						wW = $window.width(), wH = $window.height(),
-						
-						scroller = this, $scroller = $(this),
-						cB = $scroller.offset(),
-						cW = $scroller.innerWidth(), cH = $scroller.innerHeight();
-
-					$elems.each(function() {
-						var $scrollee = $(this), o = $scrollee.offset(),
-							w = $scrollee.innerWidth(), h = $scrollee.innerHeight(),
-							r = o.left+w, b = o.top+h;
-
-						$scrollee.trigger((/* Within window? */
-							(!(r < scrollLeft || o.left > wW+scrollLeft ||
-							b < scrollTop || o.top > wH+scrollTop) &&
-							/* If it was the window, we're done */
-							(scroller === window ||
-							/* Otherwise, check container too */
-							!(r < cO.left || o.left > cO.left+cW ||
-							b < cO.top || o.top > cO.top+cH)))?
-								"visible" : "invisible"), scroller);
-					});
-				});
-
-			return this;
+				$this.css('opacity', ((o < 0)? 0.1 : o));
+				$this[0].offsetHeight;
+				$this.css('opacity', '');
+			});
 		},
-		unwatchVisible: function(container) {
-			(container || window).off(".watchVisible");
-			return this;
-		}
+		/* TODO: debounce! */
+		watchAppear: (function() {
+			$.$watchedBoxes = $();
+
+			var $self = $(self),
+				watching = false;
+
+			function watchBoxes(e) {
+				var $boxes = ((e.target == self)? $.$watchedBoxes
+						:	$(e.target).find($.$watchedBoxes));
+
+				if($boxes.length) {
+					var sL = $self.scrollLeft(), sT = $self.scrollTop(),
+						sR = sL+$self.width(), sB = sT+$self.height();
+
+					$boxes.each(function() {
+						var $box = $(this), o = $box.offset(),
+							w = $box.innerWidth(), h = $box.innerHeight(),
+							r = o.left+w, b = o.top+h,
+
+							left = (o.left < sL), right = (r > sR),
+							above = (o.top < sT), below = (b > sB),
+							outside = (r < sL || o.left > sR ||
+										b < sT || o.top > sB);
+
+						if(!$box.data('watchAppear.justWindow') && (!outside ||
+							!left || !right || !above || !below)) {
+							$box.parents().each(function() {
+								var $container = $(this);
+
+								if($container.css('overflow') != "visible") {
+									var cO = $container.offset(),
+										cW = $container.innerWidth(),
+										cH = $container.innerHeight();
+
+									return !((left = (left || (o.left < cO.left))) &&
+										(right = (right || (r > cO.left+cW))) &&
+										(above = (above || (o.top < cO.top))) &&
+										(below = (below || (b > cO.top+cH))) &&
+										(outside = (outside ||
+											(r < cO.left || o.left > cO.left+cW ||
+											b < cO.top || (o.top > cO.top+cH)))));
+								}
+							});
+						}
+
+						$box.toggleClass('left', left)
+							.toggleClass('right', right)
+							.toggleClass('above', above)
+							.toggleClass('below', below)
+							.toggleClass('outside', outside);
+					});
+				}
+			}
+
+			return function(scrollContainer) {
+				var $this = $(this),
+					$container = $(scrollContainer);
+
+				$.$watchedBoxes = $.$watchedBoxes.add($this
+							.data('watchAppear.justWindow',
+									$container[0] === self));
+
+				$container.off('.watchAppear')
+					.on('scroll.watchAppear', watchBoxes);
+
+				if(!watching) {
+					$self.on('resize.watchAppear', watchBoxes);
+					watching = true;
+				}
+
+				$self.trigger('resize');
+
+				return $this;
+			};
+		})()
 	});
 })(jQuery);
 
@@ -424,72 +477,3 @@ var Stats=function(){var h,a,r=0,s=0,i=Date.now(),u=i,t=i,l=0,n=1E3,o=0,e,j,f,b=
 "0 0 3px 3px";d.style.display="none";h.appendChild(d);k=document.createElement("div");k.style.fontFamily="Helvetica, Arial, sans-serif";k.style.fontSize="9px";k.style.color="rgb("+c[1][0]+","+c[1][1]+","+c[1][2]+")";k.style.fontWeight="bold";k.innerHTML="MS";d.appendChild(k);g=document.createElement("div");g.style.position="relative";g.style.width="74px";g.style.height="30px";g.style.backgroundColor="rgb("+c[1][0]+","+c[1][1]+","+c[1][2]+")";for(d.appendChild(g);74>g.children.length;)a=document.createElement("span"),
 a.style.width="1px",a.style.height=30*Math.random()+"px",a.style.cssFloat="left",a.style.backgroundColor="rgb("+c[0][0]+","+c[0][1]+","+c[0][2]+")",g.appendChild(a);return{getDomElement:function(){return h},getFps:function(){return l},getFpsMin:function(){return n},getFpsMax:function(){return o},getMs:function(){return m},getMsMin:function(){return p},getMsMax:function(){return q},update:function(){i=Date.now();m=i-u;p=Math.min(p,m);q=Math.max(q,m);k.textContent=m+" MS ("+p+"-"+q+")";var a=Math.min(30,
 30-30*(m/200));g.appendChild(g.firstChild).style.height=a+"px";u=i;s++;if(i>t+1E3)l=Math.round(1E3*s/(i-t)),n=Math.min(n,l),o=Math.max(o,l),j.textContent=l+" FPS ("+n+"-"+o+")",a=Math.min(30,30-30*(l/100)),f.appendChild(f.firstChild).style.height=a+"px",t=i,s=0}}};
-
-
-/*global jQuery */
-/*!
-* FitText.js 1.0
-*
-* Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license 
-* http://sam.zoy.org/wtfpl/
-*
-* Date: Thu May 05 14:23:00 2011 -0600
-*/
-
-(function($, sr){
-	// debouncing function from John Hann
-	// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-	var debounce = function(func, threshold, execAsap) {
-		var timeout;
-
-		return function debounced () {
-			var obj = this, args = arguments;
-			function delayed () {
-				if (!execAsap)
-					func.apply(obj, args);
-				timeout = null; 
-			};
-
-			if(timeout) { clearTimeout(timeout); }
-			else if(execAsap) { func.apply(obj, args); }
-
-			timeout = setTimeout(delayed, threshold || 70); 
-		};
-	}
-	// smartresize 
-	jQuery.fn[sr] = function(fn) {
-		return ((fn)? this.on('resize', debounce(fn)) : this.trigger(sr));
-	};
-})(jQuery,'smartresize');
-
-(function($){
-	$.fn.fitText = function(kompressor, options) {
-		// Setup options
-		var compressor = kompressor || 1,
-			settings = $.extend({
-				'minFontSize': Number.NEGATIVE_INFINITY,
-				'maxFontSize': Number.POSITIVE_INFINITY,
-				'letters': null
-			}, options);
-
-		return this.each(function() {
-			// Store the object
-			var $this = $(this), $parent = $this.parent(),
-				letters = ((settings.letters === null)?
-						$this.text().length : settings.letters);
-
-			var resizer = function() {
-				$this.css('font-size', Math.pinToRange(parseFloat(settings.minFontSize),
-					Math.min($this.width()/(0.3*letters), $this.height())/compressor,
-					parseFloat(settings.maxFontSize)));
-			};
-
-			// Call once to set.
-			resizer();
-
-			// Call on resize. Opera debounces their resize by default. 
-			$(window).smartresize(function() { resizer($this); });
-		});
-	};
-})(jQuery);

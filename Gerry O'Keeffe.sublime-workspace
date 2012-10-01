@@ -1,0 +1,1792 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inne",
+				"innerHeight"
+			],
+			[
+				"smoo",
+				"smoothScroll"
+			],
+			[
+				"styl",
+				"styleMap"
+			],
+			[
+				"see",
+				"seededRandom"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"update",
+				"updateBounds"
+			],
+			[
+				"updateT",
+				"updateTreeItem"
+			],
+			[
+				"si",
+				"size"
+			],
+			[
+				"vie",
+				"viewport"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"ext",
+				"extender"
+			],
+			[
+				"cen",
+				"cenetMass"
+			],
+			[
+				"resol",
+				"resolves"
+			],
+			[
+				"total",
+				"totalInvMass"
+			],
+			[
+				"tota",
+				"totalInvMass"
+			],
+			[
+				"acc",
+				"accSepVel"
+			],
+			[
+				"pos",
+				"posTo"
+			],
+			[
+				"envi",
+				"environmentBoundRect"
+			],
+			[
+				"tree",
+				"treeItem"
+			],
+			[
+				"max",
+				"maxForce"
+			],
+			[
+				"view",
+				"viewportFolder"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"fo",
+				"force"
+			],
+			[
+				"spring",
+				"springInfluence"
+			],
+			[
+				"wa",
+				"wanderInfluence"
+			],
+			[
+				"move",
+				"moveKey"
+			],
+			[
+				"key",
+				"keydown"
+			],
+			[
+				"inp",
+				"inputForce"
+			],
+			[
+				"functi",
+				"function"
+			],
+			[
+				"shape",
+				"shapeTree"
+			],
+			[
+				"sha",
+				"shapeTree"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"po",
+				"points"
+			],
+			[
+				"m",
+				"mag"
+			],
+			[
+				"li",
+				"lift"
+			],
+			[
+				"ca",
+				"canvas"
+			],
+			[
+				"can",
+				"canvas"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"center",
+				"centerMass"
+			],
+			[
+				"from",
+				"fromRGBA"
+			],
+			[
+				"point",
+				"points"
+			],
+			[
+				"R",
+				"RGBAString"
+			],
+			[
+				"unit",
+				"doUnit"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"mag",
+				"magSq"
+			],
+			[
+				"tou",
+				"touch"
+			],
+			[
+				"v",
+				"viewport"
+			],
+			[
+				"bindingW",
+				"bindingWithEvent"
+			],
+			[
+				"to",
+				"touch"
+			],
+			[
+				"touch",
+				"touches"
+			],
+			[
+				"b",
+				"beam"
+			],
+			[
+				"co",
+				"commands"
+			],
+			[
+				"ra",
+				"range"
+			],
+			[
+				"cont",
+				"controller"
+			],
+			[
+				"dist",
+				"distSq"
+			],
+			[
+				"pl",
+				"place"
+			],
+			[
+				"u",
+				"update"
+			],
+			[
+				"Watc",
+				"Watchable"
+			],
+			[
+				"Vector",
+				"Vector2D"
+			],
+			[
+				"up",
+				"up"
+			],
+			[
+				"Contr",
+				"Controller"
+			],
+			[
+				"shap",
+				"shape"
+			],
+			[
+				"cir",
+				"circle1"
+			],
+			[
+				"ligh",
+				"light"
+			],
+			[
+				"neigh",
+				"neighbour"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"litEntities",
+				"litEntities"
+			],
+			[
+				"tr",
+				"treeItem"
+			],
+			[
+				"di",
+				"distSq"
+			],
+			[
+				"ce",
+				"centerMass"
+			],
+			[
+				"we",
+				"weight"
+			],
+			[
+				"o",
+				"options"
+			],
+			[
+				"nei",
+				"neighbourRad"
+			],
+			[
+				"context",
+				"context"
+			],
+			[
+				"lE",
+				"lE"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"lit",
+				"litEntities"
+			],
+			[
+				"d",
+				"diam"
+			],
+			[
+				"dia",
+				"diam"
+			],
+			[
+				"get",
+				"get	Get Elements"
+			],
+			[
+				"g",
+				"get	Get Elements"
+			],
+			[
+				"n",
+				"networker"
+			],
+			[
+				"pe",
+				"persistor"
+			],
+			[
+				"r",
+				"renderer"
+			],
+			[
+				"per",
+				"persistor"
+			],
+			[
+				"ren",
+				"renderer"
+			],
+			[
+				"w",
+				"watch"
+			],
+			[
+				"on",
+				"onRenderDone"
+			],
+			[
+				"callbac",
+				"callback"
+			],
+			[
+				"argum",
+				"arguments"
+			],
+			[
+				"updateL",
+				"updateLocked"
+			],
+			[
+				"upd",
+				"updateLocked"
+			],
+			[
+				"watc",
+				"watch"
+			],
+			[
+				"Wa",
+				"Watchable"
+			],
+			[
+				"onRend",
+				"onRenderDone"
+			],
+			[
+				"onRender",
+				"onRenderDone"
+			],
+			[
+				"onR",
+				"onRenderDoneCallbacks"
+			],
+			[
+				"function",
+				"functions"
+			],
+			[
+				"rende",
+				"renderDone  (variable)"
+			],
+			[
+				"rendere",
+				"renderer  (variable)"
+			],
+			[
+				"Lumen",
+				"Lumens"
+			],
+			[
+				"sin",
+				"singleton"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"Rendere",
+				"Renderer"
+			],
+			[
+				"cle",
+				"clear"
+			],
+			[
+				"swarmtr",
+				"swarmTree"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"enti",
+				"entityTree"
+			],
+			[
+				"this",
+				"this"
+			],
+			[
+				"swa",
+				"swarmTree"
+			],
+			[
+				"sw",
+				"swarm"
+			],
+			[
+				"entity",
+				"entity"
+			],
+			[
+				"bounds",
+				"bounds"
+			],
+			[
+				"bod",
+				"body"
+			],
+			[
+				"underl",
+				"underline"
+			],
+			[
+				"en",
+				"entityTree"
+			],
+			[
+				"res",
+				"resolve"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"add",
+				"add"
+			],
+			[
+				"cu",
+				"currentTime"
+			],
+			[
+				"tim",
+				"time"
+			],
+			[
+				"time",
+				"timeout: setTimeout function"
+			],
+			[
+				"curre",
+				"currentTime"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/script.js",
+			"settings":
+			{
+				"buffer_size": 23844,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 12987,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/plugins.js",
+			"settings":
+			{
+				"buffer_size": 61084,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 16669,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Eoghan/Documents/Projects/Lumens/css/style.css",
+			"settings":
+			{
+				"buffer_size": 12701,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/excerpts.css",
+			"settings":
+			{
+				"buffer_size": 1283,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Discover Packages"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"inte",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"intel",
+				"SublimeCodeIntel: Enable Live Autocompletion"
+			],
+			[
+				"codint",
+				"SublimeCodeIntel: Disable Live Autocompletion"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"cus",
+				"Git: Custom Command"
+			],
+			[
+				"cust",
+				"Git: Custom Command"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"git cus",
+				"Git: Custom Command"
+			],
+			[
+				"git cust",
+				"Git: Custom Command"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"enable",
+				"SublimeCodeIntel: Enable Live Autocompletion"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"gitpu",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"gitadd",
+				"Git: Add Current File"
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"git",
+				"Git: Custom Command"
+			],
+			[
+				"gitcu",
+				"Git: Custom Command"
+			],
+			[
+				"li",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"discover",
+				"Package Control: Discover Packages"
+			],
+			[
+				"prefer",
+				"Preferences: Default Global Settings"
+			],
+			[
+				"abou",
+				"About"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"linte",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"snippet",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"soda",
+				"Snippet: for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"syntajavasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"key",
+				"Preferences: User Key Bindings"
+			],
+			[
+				"pack di",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pack cont inst",
+				"Package Control: Install Package"
+			],
+			[
+				"enable ",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack ont in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack cont ",
+				"Package Control: Disable Package"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"settings ",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"settin",
+				"Preferences: User Global Settings"
+			],
+			[
+				"pack disc",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 426.0
+	},
+	"console":
+	{
+		"height": 115.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Eoghan/Documents/Projects/Gerry O'Keeffe/css/excerpts.css",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/css/style.css",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/index.html",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/script.js",
+		"/C/Users/Eoghan/Documents/Projects/Gerry O'Keeffe/js/libs/modernizr-2.5.0.min.js",
+		"/C/Users/Eoghan/Documents/Software/Web/FitText.js/jquery.fittext.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - live/index.html",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - live/css/style.css",
+		"/C/Users/Eoghan/Documents/Fluid Rock/EDCO Digital/EDCO eBook/eBook development version/Browser/Browser-Book-Viewer/index.html",
+		"/C/Users/Eoghan/Documents/Fluid Rock/EDCO Digital/EDCO eBook/final development version/iOS/viewer.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/plugins.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/documents/Final Demonstration 2/Slides/css/main.css",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Level Generator Demo/js/script.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - live/js/script.js",
+		"/C/Users/Eoghan/Documents/Fluid Rock/EDCO Digital/EDCO eBook/eBook development version/Browser/Browser-Book-Viewer/js/plugins.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Level Generator Demo/js/plugins.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Level Generator Demo/index.html",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Level Generator Demo/css/style.css",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/HTML.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 8/Game AI/7 - Genetic Algorithms/ReadMe.txt",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender/source/update.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender/source/defender.cpp",
+		"/C/Users/Eoghan/Documents/Projects/Lumens Demo/js/script.js",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/Assignment 2/src/utils/matrix4.cpp",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/Assignment 2/src/physics/physicsactor.cpp",
+		"/C/Users/Eoghan/Downloads/lights.yaml",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/model.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/model.mb",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/testcube.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/physicsmodel.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/physicsmodel.mb",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/cube.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/cylinder.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/objects.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/scene.mb",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/18 - Textures/cylinder2.obj",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/readme.md",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 8/Game AI/5 - Scripting/Truth Table.lua",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/build/Three.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/libs/ThreeWebGL.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/libs/ThreeExtras.js",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/src/lights/SpotLight.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Complex RT/js/script.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Circles/js/plugins.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens - Circles/js/script.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/reference/Light/WebGL Path Tracing - Made By Evan.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/snippets",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/test_environment.json",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/test_environment_small.json",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/src/Three.js",
+		"/C/Users/Eoghan/Downloads/nvshader.cpp",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/build/custom/ThreeExtras.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/libs/Three.js",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/README.rst",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 8/Game AI/5 - Scripting/Scripting Source/ScriptedStateMachine/ScriptedStateMachine.h",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/examples/webgl_camera.html",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8b - Projections/objects.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8b - Projections/cube.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8b - Projections/cylinder2.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8b - Projections/cylinder.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8b - Projections/model.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8a - Son of Loader of Wavefronts/cylinder.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8a - Son of Loader of Wavefronts/cube.obj",
+		"/C/Users/Eoghan/Documents/Eclipse Workspace C C++/8a - Son of Loader of Wavefronts/model.obj",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/examples/webgl_morphtargets (2).html",
+		"/C/Users/Eoghan/Documents/Projects/webgl_morphtargets.html",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/examples/webgl_morphtargets.html",
+		"/C/Users/Eoghan/Documents/Software/Web/three.js/src/scenes/Scene.js",
+		"/C/Users/Eoghan/Documents/Software/Web/stats.js/README.md",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/libs/Stats.js",
+		"/C/Users/Eoghan/Documents/Software/Web/stats.js/src/Stats.js",
+		"/C/Users/Eoghan/Documents/Software/Web/stats.js/LICENSE",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/Labs/5b - CnC Rolling Pencil/source/Pencil.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/Labs/5b - CnC Rolling Pencil/source/YAMPE/P_ContactGenerators.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/Labs/5b - CnC Rolling Pencil/source/App.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender/source/defender.h",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/05-Constraints and Collisions/source/YAMPE/P_ContactGenerators.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/05-Constraints and Collisions/source/App.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/05-Constraints and Collisions/source/YAMPE/P_ContactRegistry.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/05-Constraints and Collisions/source/YAMPE/P_Contact.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender Tests - Pool/source/Pool.h",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender Tests - Pool/source/Vector2f.h",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender Tests - Pool/source/Pool.cpp",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Project/Lumens - 0/css/style.css",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Project/Lumens - 0/js/plugins.js",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Project/Lumens - 0/index.html",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Project/Lumens - 0/js/script.js",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/05-Constraints and Collisions/include/YAMPE/P_Contact.h",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Mathematics for Game Development/05-Constraints and Collisions/include/YAMPE/P_ContactGenerators.h",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/lumens.html",
+		"/C/Users/Eoghan/Documents/Software/Web/HTML5 Boilerplate/css/style.css",
+		"/C/Users/Eoghan/Documents/Software/Web/HTML5 Boilerplate/js/plugins.js",
+		"/C/Users/Eoghan/Documents/Software/Web/HTML5 Boilerplate/js/script.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/index (2).html",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 8/Game AI/Raven Assignment 1 - Eoghan OKeeffe - 08543453/Answers.txt",
+		"/C/Users/Eoghan/Documents/Fluid Rock/EDCO Digital/EDCO eBook/final development version/Book-Viewer-Rafal/js/viewer.js",
+		"/C/Users/Eoghan/Documents/Fluid Rock/EDCO Digital/EDCO eBook/eBook development version/Browser/Browser-Book-Viewer/js/viewer.js",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/js/libs/gl-matrix/gl-matrix.js",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens - 0/css/style.css",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens - 0/index.html",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens - 0/js/plugins.js",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/Git.sublime-settings",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens - 0/js/script.js",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Console Game Development II/Labs/Defender/source/Entity.h",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/humans.txt",
+		"/C/Users/Eoghan/Documents/Projects/Lumens/documents/Design.pdf",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens/css/style.css",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens/index.html",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens/js/script.js",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Project I/Lumens/js/plugins.js",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Eoghan/Documents/Entertainment Systems/Year 4/Semester 7/Game Development II/Qt/TileProjects/Map Generator/Map.xml",
+		"/C/Users/Eoghan/AppData/Roaming/Sublime Text 2/Packages/Git/README.markdown",
+		"/C/Users/Eoghan/Documents/Git/Lumens/README",
+		"/C/Users/Eoghan/.ssh/id_rsa.pub"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"focus",
+			"p",
+			"Reveal",
+			"span",
+			"em",
+			"hidden",
+			"propertyOrMap",
+			"visited",
+			"font",
+			"TODO",
+			"tab",
+			"totalF",
+			"total",
+			"containingAARect",
+			"containingAArect",
+			"recordResults",
+			"GeneratorViewport",
+			"		.",
+			"Math.seededRandom(Math.seededRandom())",
+			"boreRad",
+			"toroid",
+			"p",
+			"shere",
+			"black",
+			"Schedule",
+			"backdropID",
+			"MAX_SPO",
+			"spotli",
+			"__dirty",
+			"position.z",
+			"height",
+			"infinity",
+			"infinityOK",
+			"posInfinity",
+			"infini",
+			"infinity",
+			"entities",
+			"numQuadTreeNodes",
+			"\\",
+			"numQuadTreeNodes",
+			"maxRays",
+			"(true)",
+			"(true",
+			"pos",
+			"maxRays",
+			"maxHits",
+			"infinity",
+			"numTriangles",
+			"numMeshes",
+			"numQuadTreeNodes",
+			"triangles",
+			"meshes",
+			"quadTree",
+			"spotLightFalloff",
+			"spotLightCosAngle",
+			"spotLightDirection",
+			"pointLightDistance",
+			"pointLightPosition",
+			"pointLightColor",
+			"cameraPosition",
+			"ambientLightColor",
+			"numMeshes",
+			"intersectMeshes",
+			"AABBox",
+			"budget",
+			"numQ",
+			"QUAD",
+			"numM",
+			"MESHES_BUDGET_F",
+			"HIT_BUDGET_F",
+			"numTriangles",
+			"numMeshes",
+			"QUAD_TREE_",
+			"NUM_TRIANGLES",
+			"NUM_QUAD_TREE_NODES",
+			"NUM_MESHES",
+			"NUM_QUAD_TREE_NODES",
+			"MAX_HITS",
+			"MAX_RAYS",
+			"MAX_HITS",
+			"concat",
+			"material",
+			"settings = ",
+			"geometryutils.tria",
+			"triangulate",
+			"addEntity",
+			"meshes",
+			"plane",
+			"mini",
+			"mat",
+			"hitPoint",
+			"meshTree",
+			"this.shapes",
+			"QuadTree",
+			"RayTracer",
+			"Spotlight",
+			"spotlight",
+			"NUM_QUAD_TREE_NODES",
+			"hits",
+			"QUADTREE",
+			"+0.5",
+			"mediumIOR",
+			"quadTreeStep",
+			"dataListStep",
+			"\\",
+			"#",
+			"#i",
+			"define",
+			"propsPad",
+			"propsStep",
+			"triPointPad",
+			"triPointStep",
+			"matColPad",
+			"matColStep",
+			"nodePad",
+			"nodeStep",
+			"hit",
+			"EPSILON",
+			"PRECISION",
+			"getShadowTestCode",
+			"colorMask",
+			"mix",
+			"smoothste",
+			"newDiffuseRay",
+			"bounces",
+			"isnumeric",
+			"'+",
+			"getNormalCalculationCode"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"div",
+			"Visible",
+			"div",
+			"propOrMap",
+			"fitness",
+			"Viewport",
+			"Math.seededRandom(true)",
+			"boundRad",
+			"infinity",
+			"infinityOK",
+			"posInfinity",
+			"numNodes",
+			"AABox",
+			"budgets",
+			"triangleCount",
+			"meshCount",
+			"TRIANGLES_BUDGET",
+			"QUAD_TREE_NODES_BUDGET",
+			"MESHES_BUDGET",
+			"QUAD_TREE_BUDGET",
+			"RAY_BUDGET",
+			"HIT_BUDGET",
+			"add",
+			"entities",
+			"shape",
+			"material",
+			"hit",
+			"SpotLight",
+			"spotLight",
+			"QUAD_TREE",
+			"+PAD",
+			"MEDIUM_IOR",
+			"QUAD_TREE_STEP",
+			"DATA_LIST_STEP",
+			"\\n\\",
+			"PROPS_PAD",
+			"PROPS_STEP",
+			"TRI_POINT_PAD",
+			"TRI_POINT_STEP",
+			"MAT_COL_PAD",
+			"MAT_COL_STEP",
+			"NODE_PAD",
+			"NODE_STEP",
+			"hitPoint",
+			"EPSILON",
+			"hits",
+			"\\",
+			"target",
+			"avoid",
+			"swarm",
+			"wander",
+			"self",
+			"three",
+			"verts",
+			"swarm",
+			"add",
+			"camera.fov",
+			"container",
+			"viewAngle",
+			"b",
+			"a",
+			"true",
+			"start",
+			"wall",
+			"nearby",
+			"near",
+			"nearby",
+			"sOwner",
+			"shape",
+			"owner",
+			"viewport.debug",
+			"this.debug",
+			"self",
+			"settings",
+			"settings.size",
+			"edgeKids",
+			"clear(true)",
+			"self",
+			"lumens",
+			"this",
+			"other",
+			"maxRechecks",
+			"rechecks",
+			"recheckCollisions",
+			"add",
+			"put",
+			"s",
+			"source",
+			"",
+			"this",
+			"nodesFor",
+			"instance",
+			"rect",
+			"other",
+			"Force",
+			"this",
+			"treeItem",
+			"treeNode",
+			"centerPoint",
+			"updateTrail",
+			"BodyShape",
+			"setupSurface",
+			"wrap",
+			"Body",
+			"softClosedSurface",
+			"copy",
+			"other",
+			"clone",
+			"clone()",
+			"sizeRange",
+			"boundRect",
+			"boundRad",
+			"Vec2D",
+			"boundRad",
+			"AARect",
+			"key",
+			"viewport",
+			"render",
+			"ctrl",
+			"/",
+			"hsla",
+			"eventPos(",
+			"events",
+			"lB",
+			"render",
+			"ctrl+alt+"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/script.js",
+					"settings":
+					{
+						"buffer_size": 23844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								716,
+								716
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"buffer_scroll_name": "2ddfa496",
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"multistr": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 12987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8268,
+								8268
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"buffer_scroll_name": "aca116c5",
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"multistr": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2197.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "js/plugins.js",
+					"settings":
+					{
+						"buffer_size": 61084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9699,
+								9699
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"buffer_scroll_name": "3a9710d8",
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"multistr": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1820.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/style.css",
+					"settings":
+					{
+						"buffer_size": 16669,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11247,
+								11247
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"buffer_scroll_name": "ac043117",
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"multistr": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5929.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Eoghan/Documents/Projects/Lumens/css/style.css",
+					"settings":
+					{
+						"buffer_size": 12701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7923,
+								7968
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"buffer_scroll_name": "aa743d75",
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"multistr": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3157.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/excerpts.css",
+					"settings":
+					{
+						"buffer_size": 1283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1283
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"buffer_scroll_name": "066a135e",
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"multistr": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 27.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"index",
+				"Lumens/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true
+}

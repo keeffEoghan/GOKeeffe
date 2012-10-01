@@ -87,3 +87,293 @@
     left: 40%;
   }
 }
+
+/* CONTACT { */#contact {
+    background: rgba(0, 25, 34, 0.85);
+    color: white;
+    position: relative;
+}
+
+#contact > div {
+    height: 100%;
+    overflow: hidden;
+}
+
+#contact > div > div {
+    height: 20%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0.65;
+    position: relative;
+    border: 1px solid black;
+    -webkit-transition: background 0.4s ease-out,
+    opacity 0.4s ease-out,
+    height 0.2s ease-in-out;
+    -moz-transition: background 0.4s ease-out,
+    opacity 0.4s ease-out,
+    height 0.2s ease-in-out;
+    -ms-transition: background 0.4s ease-out,
+    opacity 0.4s ease-out,
+    height 0.2s ease-in-out;
+    -o-transition: background 0.4s ease-out,
+    opacity 0.4s ease-out,
+    height 0.2s ease-in-out;
+    transition: background 0.4s ease-out,
+    opacity 0.4s ease-out,
+    height 0.2s ease-in-out;
+}
+
+#contact > div:hover > div {
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0.55;
+    height: 17.5%;
+}
+
+#contact > div > div:hover {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.75;
+    height: 22.5%;
+}
+
+#contact > div > div.selected {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.85;
+    height: 60%;
+}
+
+#contact > div > div.selected:hover {
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0.95;
+    height: 65%;
+}
+
+/* FORM */
+
+form {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+label, input, textarea, select, fieldset {
+    margin: 0.5em auto;
+    vertical-align: middle;
+    position: relative;
+}
+
+fieldset > fieldset > label, fieldset > fieldset > input,
+fieldset > fieldset > textarea, fieldset > fieldset > select {
+    margin: 0 auto;
+}
+
+input, textarea, select {
+    width: 20em;
+    float: left;
+    box-shadow: inset 2px 1px 2px rgba(0, 0, 0, 0.4);
+    padding: 0.1em 0.2em;
+    border: 0.1em solid rgb(240, 240, 240);
+}
+
+select {
+    height: 1.6em;
+    width: 20.5em;
+}
+
+label {
+    text-align: right;
+    float: left;
+    clear: left;
+    background: rgb(240, 240, 240);
+    color: black;
+    min-width: 6em;
+    padding: 0.1em 0.2em;
+    border: 0.1em solid rgb(240, 240, 240);
+    line-height: normal;
+}
+
+textarea {
+    height: 8em;
+    border-radius: 0 0 0 0.8em;
+}
+
+fieldset {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: inline-block;
+}
+
+form > fieldset {
+    float: left;
+    width: 28em;
+    height: 100%;
+    margin: 0;
+}
+
+form > fieldset:nth-of-type(1),
+form > fieldset:nth-of-type(2) {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+form > fieldset:nth-of-type(1) {
+    padding: 2em 20px 2em 1em;
+    right: -50%;
+    margin-left: -32em;
+}
+
+form > fieldset:nth-of-type(2) {
+    padding: 2em 1em 2em 20px;
+    left: 50%;
+    margin-left: 3em;
+}
+
+form.send > fieldset:nth-last-of-type(1n+2) {
+    width: 0;/* Doesn't work - transforms? */
+}
+
+form > fieldset:last-of-type {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3em;
+    width: 5em;
+    padding: 0em 0.5em;
+    background: #E2C771;
+    box-shadow: 0 0 5px #E2C771;
+    z-index: 1;
+}
+
+#submit, #clear {
+    position: absolute;
+    box-shadow: none;
+    width: 5em;
+    padding: 0;
+    margin: 0;
+}
+
+#submit {
+    top: 0em;
+    bottom: 2em;
+    background: green;
+    border: outset 2px green;
+}
+
+#clear {
+    height: 2em;
+    bottom: 0;
+    background: red;
+    border: outset 2px red;
+}
+
+form > fieldset:nth-of-type(1) label {
+    border-radius: 0.8em 0 0 0.8em;
+}
+
+form > fieldset:nth-of-type(1) > label:after,
+form > fieldset:nth-of-type(1) > fieldset:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 1.6em solid transparent;
+    border-left: 40px solid rgb(240, 240, 240);
+    top: 0em;
+}
+
+form > fieldset:nth-of-type(1) > label:after {
+    top: -0.1em;
+    margin-left: 20.8em;
+}
+
+label[for="spam"]:after {
+    margin-left: 14.7em !important;
+}
+
+form > fieldset:nth-of-type(2) > label:before {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -40px;
+    border-top: 1.6em solid transparent;
+    border-right: 40px solid rgb(240, 240, 240);
+    bottom: -0.1em;
+}
+
+label[for="email"] {
+    border-radius: 0.8em 0 0 0 !important;
+}
+
+label[for="phone"] {
+    border-radius: 0 0 0 0.8em !important;
+}
+
+label[for="spam"] {
+    width: 12em;
+}
+
+#spam {
+    width: 14em;
+}
+
+#size {
+    width: 12em;
+    border-radius: 0;
+}
+
+select[name="sizes"] {
+    width: 8em;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.inlinecontrols {
+    width: auto;
+    height: 1.4em;
+}
+
+.inlinecontrols > label {
+    clear: none;
+    width: 6em;
+    background: #f0f0f0;
+    text-align: left;
+    border: none;
+    border-radius: 0 0.8em 0.8em 0;
+    margin-right: 0.5em;
+}
+
+.inlinecontrols > label:before {
+    content: " ";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: -0.5em;
+    top: 50%;
+    margin-top: -0.75em;
+    border-top: 0.75em solid transparent;
+    border-bottom: 0.75em solid transparent;
+    border-right: 0.5em solid rgb(240, 240, 240);
+}
+
+/* GET IN TOUCH */
+
+/* DETAILS */
+
+#details > div:first-of-type {
+
+}
+
+/* } */
