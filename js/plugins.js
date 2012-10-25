@@ -26,6 +26,27 @@ if(!self.requestAnimationFrame) {
 		};
 }
 
+/* Throttles the execution of callbacks to occur no more
+	frequently than every 'delay' milliseconds */
+function throttle(callback, delay) {
+	delay = (($.isNumeric(delay))? delay : 1000/30);
+
+	var last = Date.now()-delay,
+		timeout = null;
+
+	return function() {
+		var args = arguments,
+			scope = this;
+
+		clearTimeout(timeout);
+
+		timeout = setTimeout(function() {
+				callback.apply(scope, args);
+				last = Date.now();
+			}, delay-(Date.now()-last));
+	};
+}
+
 (function($) {
 	/* Math */
 	$.extend(Math, {
@@ -294,7 +315,6 @@ if(!self.requestAnimationFrame) {
 				$this.css('opacity', '');
 			});
 		},
-		/* TODO: debounce! */
 		watchAppear: (function() {
 			$.$watchedBoxes = $();
 
@@ -317,9 +337,11 @@ if(!self.requestAnimationFrame) {
 							left = (o.left < sL), right = (r > sR),
 							above = (o.top < sT), below = (b > sB),
 							outside = (r < sL || o.left > sR ||
-										b < sT || o.top > sB);
+										b < sT || o.top > sB),
 
-						if(!$box.data('watchAppear.justWindow') && (!outside ||
+							data = $box.data('watchAppear');
+
+						if(!data.justWindow && (!outside ||
 							!left || !right || !above || !below)) {
 							$box.parents().each(function() {
 								var $container = $(this);
@@ -340,28 +362,61 @@ if(!self.requestAnimationFrame) {
 							});
 						}
 
+						var wasOutside = $box.hasClass('outside');
+
 						$box.toggleClass('left', left)
 							.toggleClass('right', right)
 							.toggleClass('above', above)
 							.toggleClass('below', below)
 							.toggleClass('outside', outside);
+
+						if(wasOutside !== outside) {
+							var callback = data[((outside)?
+											'disappear' : 'appear')];
+
+							if($.isFunction(callback)) {
+								callback.apply($box);
+							}
+						}
 					});
 				}
 			}
 
-			return function(scrollContainer) {
+			return function(scrollContainer, callbacks) {
 				var $this = $(this),
-					$container = $(scrollContainer);
+					$container;
 
-				$.$watchedBoxes = $.$watchedBoxes.add($this
-							.data('watchAppear.justWindow',
-									$container[0] === self));
+				if($.isPlainObject(scrollContainer)) {
+					callbacks = scrollContainer;
+					scrollContainer = null;
+				}
+
+				if(!scrollContainer) {
+					$(scrollContainer).parents().each(function() {
+						var $c = $(this);
+
+						if($c.css('overflow').search(/visible hidden/) >= 0) {
+							$container = $c;
+							return false;
+						}
+					});
+				}
+				else { $container = $(scrollContainer); }
+
+				if(!callbacks) { callbacks = {}; }
+
+				$.$watchedBoxes = $.$watchedBoxes.add($this.data('watchAppear',
+					{
+						'justWindow': ($container[0] === self),
+						'appear': callbacks.appear,
+						'disappear': callbacks.disappear
+					}));
 
 				$container.off('.watchAppear')
-					.on('scroll.watchAppear', watchBoxes);
+					.on('scroll.watchAppear', throttle(watchBoxes));
 
 				if(!watching) {
-					$self.on('resize.watchAppear', watchBoxes);
+					$self.on('resize.watchAppear', throttle(watchBoxes));
 					watching = true;
 				}
 
