@@ -233,29 +233,41 @@ nav {
     left: 0;
     right: 0;
     height: 1.6em;
+    margin-top: 0;
     font-size: 1em;
     overflow: hidden;
     z-index: 3;
     border-bottom: 1px solid white;
-    -webkit-transition: top 0.2s ease-in-out 0.2s;
-    -moz-transition: top 0.2s ease-in-out 0.2s;
-    -ms-transition: top 0.2s ease-in-out 0.2s;
-    -o-transition: top 0.2s ease-in-out 0.2s;
-    transition: top 0.2s ease-in-out 0.2s;
+    -webkit-transition: top 0.6s ease-in-out 0.4s,
+        margin-top 0.3s ease-in-out;
+    -moz-transition: top 0.6s ease-in-out 0.4s,
+        margin-top 0.3s ease-in-out;
+    -ms-transition: top 0.6s ease-in-out 0.4s,
+        margin-top 0.3s ease-in-out;
+    -o-transition: top 0.6s ease-in-out 0.4s,
+        margin-top 0.3s ease-in-out;
+    transition: top 0.6s ease-in-out 0.4s,
+        margin-top 0.3s ease-in-out;
 }
 
 body.loading > nav,
 nav:hover {
     top: 0;
-    -webkit-transition: top 0.2s ease-in-out;
-    -moz-transition: top 0.2s ease-in-out;
-    -ms-transition: top 0.2s ease-in-out;
-    -o-transition: top 0.2s ease-in-out;
-    transition: top 0.2s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    -o-transition: top 0.2s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    transition: top 0.2s ease-in-out,
+        margin-top 0.3s ease-in-out;
 }
 
 nav.offscreen {
-    top: -1.6em;
+    top: -1.1em;
+    margin-top: -0.5em;
 }
 
 nav > menu {
@@ -589,7 +601,6 @@ canvas.blottext {
     vertical-align: top;
     right: 0px;
     top: 0;
-    padding-top: 0.5em;
     min-width: 1.6em; /* The reel's width is defined by the header */
     max-width: 18em;
     height: 100%;
@@ -604,37 +615,27 @@ canvas.blottext {
         min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out,
         margin 0.3s ease-in-out,
-        padding-top 0.3s ease-in-out,
-        right 0s ease-in-out,
-        z-index 0s linear 0.3s;
+        right 0.3s ease-in-out;
     -moz-transition: background 0.5s ease-out,
         min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out,
         margin 0.3s ease-in-out,
-        padding-top 0.3s ease-in-out,
-        right 0s ease-in-out,
-        z-index 0s linear 0.3s;
+        right 0.3s ease-in-out;
     -ms-transition: background 0.5s ease-out,
         min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out,
         margin 0.3s ease-in-out,
-        padding-top 0.3s ease-in-out,
-        right 0s ease-in-out,
-        z-index 0s linear 0.3s;
+        right 0.3s ease-in-out;
     -o-transition: background 0.5s ease-out,
         min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out,
         margin 0.3s ease-in-out,
-        padding-top 0.3s ease-in-out,
-        right 0s ease-in-out,
-        z-index 0s linear 0.3s;
+        right 0.3s ease-in-out;
     transition: background 0.5s ease-out,
         min-width 0.3s ease-in-out,
         max-width 0.3s ease-in-out,
         margin 0.3s ease-in-out,
-        padding-top 0.3s ease-in-out,
-        right 0s ease-in-out,
-        z-index 0s linear 0.3s;
+        right 0.3s ease-in-out;
 }
 
 .workreel:hover,
@@ -659,20 +660,10 @@ canvas.blottext {
 
 .workreel.active {
     z-index: 8;
-    padding-top: 0em;
-    -webkit-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
-    -moz-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
-    -ms-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
-    -o-transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
-    transition-duration: 0.5s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
 }
 
 .workreel.right {
+    position: fixed;
     right: 0px !important;
     margin: 0em;
     max-width: 1.6em;
@@ -702,11 +693,16 @@ canvas.blottext {
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -ms-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out,
+        width 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out,
+        width 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out,
+        width 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out,
+        width 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out,
+        width 0.3s ease-in-out;
 }
 
 .workreel > header {
@@ -873,7 +869,7 @@ canvas.blottext {
 #imagebox {
     cursor: not-allowed;
     position: fixed;
-    z-index: -1;
+    z-index: 7;
     top: 0;
     right: 0;
     bottom: 0;
@@ -881,26 +877,15 @@ canvas.blottext {
     padding: 20px 40px;
     background: white;
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-in-out,
-        z-index 0s linear 0.3s;
-    -moz-transition: opacity 0.3s ease-in-out,
-        z-index 0s linear 0.3s;
-    -ms-transition: opacity 0.3s ease-in-out,
-        z-index 0s linear 0.3s;
-    -o-transition: opacity 0.3s ease-in-out,
-        z-index 0s linear 0.3s;
-    transition: opacity 0.3s ease-in-out,
-        z-index 0s linear 0.3s;
-}
-
-#imagebox.active {
-    opacity: 1;
-    z-index: 7;
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     -ms-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
+}
+
+#imagebox.active {
+    opacity: 1;
 }
 
 #imagebox > img {

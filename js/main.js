@@ -95,26 +95,48 @@
 				'firstup' : 'firstdown');
 
 
+		function openImageBox() {
+			$('#main').css('overflow', 'hidden')
+				.prevAll('nav').addClass('offscreen');
+
+			$imageBox.removeClass('hidden');
+
+			// Wait a frame to ensure transition happens on imageBox
+			requestAnimationFrame(function() {
+				$imageBox.add($reel.addClass('active');
+
+				$(document).on('keydown.imageBox', navigateImages);
+
+				$reel.css('right',
+					(($reel.offset().left+$reel.outerWidth())-
+						$(document).outerWidth())+'px');
+
+				setTimeout(function() { $reel.addClass('right'); },
+					((Modernizr.csstransitions)? 300 : 0));
+			});
+		}
+
 		function closeImageBox() {
 			var $reel = $('#work article.workreel.active'),
-				$imageBox = $('#imagebox'),
-				delay = ((Modernizr.csstransitions)? 300 : 0);
+				$imageBox = $('#imagebox');
 
+			$('#main').css('overflow', '')
+				.prevAll('nav').removeClass('offscreen');
 			$(document).off('keydown.imageBox');
 			
 			$reel.removeClass('right')
 				.find('figure.selected').removeClass('selected');
 
-			setTimeout(function() {
-				$reel.css({ 'right': '', 'position': '' })
-					.add($imageBox).removeClass('active');
+			// To ensure the transition takes place on the reel after position change
+			requestAnimationFrame(function() {
+				$imageBox.removeClass('active');
+				$reel.css('right', '');
 
-				$('#main').css('overflow', '')
-					.prevAll('nav').removeClass('offscreen');
-
-				setTimeout(function() { $imageBox.addClass('hidden'); },
-					delay);
-			}, delay);
+				setTimeout(function() {
+					$imageBox.addClass('hidden');
+					$reel.removeClass('active');
+				}, ((Modernizr.csstransitions)? 300 : 0));
+			});
 		}
 
 		function closeWorkReel() {
@@ -181,33 +203,7 @@
 
 			if($fig.hasClass('selected')) { /*closeImageBox();*/ }
 			else {
-				if(!$reel.hasClass('active')) {
-					// Open the image box if not already open
-					$('#main').css('overflow', 'hidden')
-						.prevAll('nav').addClass('offscreen');
-
-					$imageBox.removeClass('hidden');
-
-					requestAnimationFrame(function() {
-						$imageBox.add($reel).addClass('active');
-
-						$(document).on('keydown.imageBox', navigateImages);
-
-						setTimeout(function() {
-							$reel.css({
-								'right': $(document).outerWidth()-
-									($reel.offset().left+$reel.outerWidth())+'px',
-								'position': 'fixed', // Needs to be here to hide reflow of other work reels
-								'transition-duration': '0.5s, 0.3s, 0.3s, 0.3s, 0s, 0s'
-							});
-
-							requestAnimationFrame(function() {
-								$reel.css('transition-duration', '')
-									.addClass('right');
-							});
-						}, (Modernizr.csstransitions)? 300 : 0);
-					});
-				}
+				if(!$reel.hasClass('active')) { openImageBox(); }
 
 				$fig.siblings('figure.selected').andSelf()
 						.toggleClass('selected');
@@ -275,18 +271,19 @@
 		}));
 		
 		$('#main').on('mousewheel.gok DOMMouseScroll.gok', function(e) {
-			var override = true;
+			var $this = $(this),
+				override = true;
 
 			if(this !== e.target) {
-				$(e.target).parentsUntil(this).andSelf().each(function() {
+				$(e.target).parentsUntil(this).each(function() {
 					return (override =
 						($(this).css('overflow').search(/hidden|visible/) >= 0));
 				});
 			}
 
-			if(override) {
-				var $this = $(this),
-					oe = e.originalEvent,
+			if(override &&
+				$this.css('overflow').search(/hidden|visible/) < 0) {
+				var oe = e.originalEvent,
 					wheel = (($.isNumeric(oe.wheelDelta))?
 						-oe.wheelDelta : oe.detail*40);
 
@@ -1478,3 +1475,41 @@
 	});
 // }
 })(jQuery);
+
+function test1() {
+	$.standardiseCss('transform', 'transition', 'perspective');
+	$('#main').css('perspective', '400px');
+	$('.workreel:eq(2)').parentsUntil('#main').andSelf()
+		.siblings().css({ 'transition': 'all 0.6s ease',
+			'transform': 'translate3d(0, 0, -100px)' });
+}
+
+function test2() {
+	$.standardiseCss('transform', 'transition', 'perspective');
+	$('#main').css('perspective', '400px');
+	$('.workreel:eq(2)').siblings()
+		.css({ 'transition': 'all 0.6s ease',
+			'transform': 'translate3d(0, 0, -100px)' });
+	$('.workreel:eq(2)').parentsUntil('#main').siblings()
+		.css({ 'transition': 'all 0.6s ease',
+			'transform': 'translate3d(0, 0, -100px)' });
+}
+
+/* Closest - reduce opacity for other sections, then do this */
+function test3() {
+	$.standardiseCss('transform', 'transition', 'perspective');
+	$('#main').css('perspective', '400px');
+	$('.workreel:eq(2)').siblings()
+		.css({ 'transition': 'all 0.6s ease',
+			'transform': 'translate3d(0, 0, -100px)' });
+}
+
+function test4() {
+	$.standardiseCss('transform', 'transition', 'perspective');
+	$('#main').css('perspective', '400px').children()
+		.css({ 'transition': 'all 0.6s ease',
+			'transform': 'translate3d(0, 0, -100px)' });
+
+	$('.workreel:eq(2)').css({ 'transition': 'all 0.6s ease',
+			'transform': 'translate3d(0, 0, 100px)' });
+}
