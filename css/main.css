@@ -649,6 +649,7 @@ canvas.blottext {
 }
 
 .workreel.selected {
+    z-index: 8;
     cursor: auto;
     min-width: 18em;
     background: rgba(0, 0, 0, 0.8);
@@ -659,17 +660,17 @@ canvas.blottext {
 }
 
 .workreel.active {
-    z-index: 8;
-}
-
-.workreel.right {
     position: fixed;
     right: 0px !important;
     margin: 0em;
     max-width: 1.6em;
 }
 
-.workreel.right:before {
+.workreel.full {
+    min-width: 100%;
+}
+
+.workreel.full:before {
     content: '◄';
     position: absolute;
     bottom: 50%;
@@ -865,6 +866,57 @@ canvas.blottext {
 .touch .workreel.selected > div > figure > figcaption {
     right: 0%;
 }
+
+.fade {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fadeout {
+    opacity: 0;
+}
+/*
+.fade {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+    -ms-transition: -ms-transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+}
+
+.fadeout {
+    -webkit-transform: translate3d(0, 0, -100px);
+    -moz-transform: translate3d(0, 0, -100px);
+    -ms-transform: translate3d(0, 0, -100px);
+    -o-transform: translate3d(0, 0, -100px);
+    transform: translate3d(0, 0, -100px);
+    opacity: 0;
+}
+
+#main {
+    -webkit-perspective: 100px;
+    -moz-perspective: 100px;
+    -ms-perspective: 100px;
+    -o-perspective: 100px;
+    perspective: 100px;
+    overflow: auto !important;
+}
+
+#work {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}*/
 
 #imagebox {
     cursor: not-allowed;

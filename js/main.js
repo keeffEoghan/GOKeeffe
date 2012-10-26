@@ -95,48 +95,57 @@
 				'firstup' : 'firstdown');
 
 
-		function openImageBox() {
-			$('#main').css('overflow', 'hidden')
-				.prevAll('nav').addClass('offscreen');
+		function openFullImage() {
+			var $reel = $('#work > .workreel.selected:not(.right.active)');
 
-			$imageBox.removeClass('hidden');
-
-			// Wait a frame to ensure transition happens on imageBox
-			requestAnimationFrame(function() {
-				$imageBox.add($reel.addClass('active');
-
+			if($reel.length) {
+				$('#main').css('overflow', 'hidden')
+					.prevAll('nav').addClass('offscreen');
 				$(document).on('keydown.imageBox', navigateImages);
 
 				$reel.css('right',
-					(($reel.offset().left+$reel.outerWidth())-
-						$(document).outerWidth())+'px');
-
-				setTimeout(function() { $reel.addClass('right'); },
-					((Modernizr.csstransitions)? 300 : 0));
-			});
-		}
-
-		function closeImageBox() {
-			var $reel = $('#work article.workreel.active'),
-				$imageBox = $('#imagebox');
-
-			$('#main').css('overflow', '')
-				.prevAll('nav').removeClass('offscreen');
-			$(document).off('keydown.imageBox');
-			
-			$reel.removeClass('right')
-				.find('figure.selected').removeClass('selected');
-
-			// To ensure the transition takes place on the reel after position change
-			requestAnimationFrame(function() {
-				$imageBox.removeClass('active');
-				$reel.css('right', '');
+						(($reel.offset().left+$reel.outerWidth())-
+							$(document).outerWidth())+'px')
+					.parentsUntil('#main').andSelf()
+					.siblings().addClass('fade fadeout');
 
 				setTimeout(function() {
-					$imageBox.addClass('hidden');
-					$reel.removeClass('active');
+					$reel.addClass('active');
+
+					// Ensure transition activates with position change
+					requestAnimationFrame(function() {
+						$reel.addClass('full');
+					});
 				}, ((Modernizr.csstransitions)? 300 : 0));
-			});
+			}
+		}
+
+		function closeFullImage() {
+			var $reel = $('#work > .workreel.active.right');
+
+			if($reel.length) {
+				$('#main').css('overflow', '')
+					.prevAll('nav').removeClass('offscreen');
+				$(document).off('keydown.imageBox');
+				
+				$reel.removeClass('full');
+
+				setTimeout(function() {
+					$reel.removeClass('active')
+							.find('figure.selected').removeClass('selected')
+						.end().parentsUntil('#main').andSelf()
+							.siblings().removeClass('fadeout');
+
+					// To ensure the transition takes place on the reel after position change
+					requestAnimationFrame(function() {
+						var $sibTree = $reel.css('right', '');
+
+						setTimeout(function() {
+							$sibTree.removeClass('fade');
+						}, ((Modernizr.csstransitions)? 300 : 0));
+					});
+				}, ((Modernizr.csstransitions)? 300 : 0));
+			}
 		}
 
 		function closeWorkReel() {
@@ -148,7 +157,7 @@
 
 			switch(e.which) {
 			case 27: // Esc
-				closeImageBox();
+				closeFullImage();
 			break;
 
 			case 38: case 37: // Up, Right
@@ -160,8 +169,15 @@
 					$prev = $sel.siblings('figure').last();
 				}
 
-				$prev.children('img').click()
-					.end()[0].scrollIntoView();
+				if($prev.length) {
+					var prev = $prev[0];
+
+					$prev.children('img').click();
+					if(prev.scrollIntoViewIfNeeded) {
+						prev.scrollIntoViewIfNeeded();
+					}
+					else { prev.scrollIntoView(); }
+				}
 
 				e.preventDefault();
 			break;
@@ -175,51 +191,54 @@
 					$next = $sel.siblings('figure').first();
 				}
 
-				$next.children('img').click()
-					.end()[0].scrollIntoView();
+				if($next.length) {
+					var next = $next[0];
+
+					$next.children('img').click();
+					if(next.scrollIntoViewIfNeeded) {
+						next.scrollIntoViewIfNeeded();
+					}
+					else { next.scrollIntoView(); }
+				}
 
 				e.preventDefault();
 			break;
 			}
 		}
 
-		/* To manipulate all elements without affecting this element or
-			its ancestors: $(this).parents().andSelf().siblings().doStuff()
-		*/
-
-		$(document).on('click.gok', '#work article.workreel:not(.selected)', function(e) {
+		$(document).on('click.gok', '#work > .workreel:not(.selected)', function(e) {
 			var $this = $(this);
 
-			$this.siblings('article.workreel.selected').andSelf()
-				.toggleClass('selected');
+			if(!$this.siblings('.workreel.active').length) {
+				$this.siblings('.workreel.selected').andSelf()
+					.toggleClass('selected');
 
-			e.stopPropagation();
+				e.stopPropagation();
+			}
 		})
-		.on('click.gok', '#work article.workreel.selected img', function(e) {
+		.on('click.gok', '#work > .workreel.selected img', function(e) {
 			var $this = $(this),
 				$fig = $this.parent(),
-				$reel = $fig.parents('#work article.workreel'),
-				$imageBox = $('#imagebox');
+				$reel = $fig.parents('#work > .workreel');
 
-			if($fig.hasClass('selected')) { /*closeImageBox();*/ }
-			else {
-				if(!$reel.hasClass('active')) { openImageBox(); }
-
+			if($fig.hasClass('selected')) { /*closeFullImage();*/ }
+			else if(!$reel.siblings('.workreel.active').length) {
+				openFullImage();
 				$fig.siblings('figure.selected').andSelf()
 						.toggleClass('selected');
 			}
 
 			/* TODO: update URL to reflect image open state */
 		})
-		.on('click.gok', '#work article.workreel.selected',
+		.on('click.gok', '#work > .workreel.selected',
 			function(e) { e.stopPropagation(); })
 		.on('click.gok', function(e) {
 			closeWorkReel();
-			closeImageBox();
+			closeFullImage();
 		});
 
 		$('#imagebox').on('click.gok', function(e) {
-			closeImageBox();
+			closeFullImage();
 			e.stopPropagation();
 		})
 		.on('click.gok', 'img', function(e) {
