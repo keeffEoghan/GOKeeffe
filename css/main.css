@@ -688,7 +688,6 @@ canvas.blottext {
     width: 18em;
     top: 0;
     bottom: 0;
-    right: 0;
     left: -9em; /* Half the full-size reel (places centerline at reel's left) */
     margin-left: 50%; /* Moves centerline to center of reel */
     overflow-y: auto;
@@ -753,20 +752,31 @@ canvas.blottext {
     opacity: 1;
 }
 
+.workreel.active > div {
+    right: 0;
+    left: auto;
+    margin-left: auto;
+}
+
 .workreel:hover > header,
 .workreel.selected > header {
     padding: 0 1.3em; /* Widens reel by 0.7em either side */
     z-index: 3;
 }
 
-.workreel.right > header {
-    opacity: 0;
-}
-
 .workreel:hover > header {
     background: rgba(0, 0, 0, 0.6);
     top: 65%;
     opacity: 1;
+}
+
+.workreel.active > header {
+    left: -18em;
+    margin-left: 100%;
+}
+
+.workreel.full > header {
+    opacity: 0;
 }
 
 .workreel.selected > header {

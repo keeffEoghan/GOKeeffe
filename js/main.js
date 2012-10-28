@@ -96,7 +96,7 @@
 
 
 		function openFullImage() {
-			var $reel = $('#work > .workreel.selected:not(.right.active)');
+			var $reel = $('#work > .workreel.selected:not(.full.active)');
 
 			if($reel.length) {
 				$('#main').css('overflow', 'hidden')
@@ -121,7 +121,7 @@
 		}
 
 		function closeFullImage() {
-			var $reel = $('#work > .workreel.active.right');
+			var $reel = $('#work > .workreel.active.full');
 
 			if($reel.length) {
 				$('#main').css('overflow', '')
@@ -132,13 +132,14 @@
 
 				setTimeout(function() {
 					$reel.removeClass('active')
-							.find('figure.selected').removeClass('selected')
-						.end().parentsUntil('#main').andSelf()
+							.find('figure.selected').removeClass('selected');
+
+					var $sibTree = $reel.parentsUntil('#main').andSelf()
 							.siblings().removeClass('fadeout');
 
 					// To ensure the transition takes place on the reel after position change
 					requestAnimationFrame(function() {
-						var $sibTree = $reel.css('right', '');
+						$reel.css('right', '');
 
 						setTimeout(function() {
 							$sibTree.removeClass('fade');
